@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+.settings/
+.vscode/
+*_LOCAL/
+bazel-*/
+lib/
+out/
+src/build/
+target/
+*.exe
+*.iml

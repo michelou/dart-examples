@@ -1,0 +1,53 @@
+# <span id="top">Dart Resources</span> <span style="size:25%;"><a href="README.md">↩</a></span>
+
+<table style="font-family:Helvetica,Arial;font-size:14px;line-height:1.6;">
+  <tr>
+  <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://dart.dev/" rel="external"><img style="border:0;" src="docs/images/dart-lang.png" width="100" alt="Dart logo"/></a></td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://dart.dev/" rel="external">Dart</a> related resources that caught our attention.
+  </td>
+  </tr>
+</table>
+
+## <span id="articles">Articles</span>
+
+
+## <span id="blogs">Blogs</span>
+
+- [The road to Dart 3: A fully sound, null safe language][blog_thomsen_dart3] by Michael_Thomsen, December 2022.
+- [Comparing Dart and TypeScript][blog_soares] by Will Soares, November 2022.
+- [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218] by Michael Thomsen, August 2022.
+- [Dart 2.17: Productivity and integration][blog_thomsen_dart217] by Michael Thomsen, May 2022.
+- [Dart 2.16: Improved tooling and platform handling][blog_thomsen_dart216] by Michael Thomsen, February 2022.
+- [Announcing Dart 2.15][blog_thomsen_dart215] by Michael Thomsen, December 2021.
+- [Announcing Dart 2.14][blog_thomsen_dart214] by Michael Thomsen, September 2021.
+- [Announcing Dart 2.13][blog_thomsen_dart213] by Michael Thomsen, May 2021.
+
+## <span id="books">Books</span>
+
+- [Dart in Action][book_buckett] by Chris Buckett, January 2013.<br/><span style="font-size:90%;">(Manning, ISBN 978-1-6172-9086-2, 424 pages)</span>
+
+## <span id="community">Community</span>
+
+- [GitHub &ndash; Waleed Arshad](https://github.com/wal33d006)
+
+## <span id="tutorials">Tutorials</span>
+
+- [Dart Basics][tutorial_sande] by Jonathan Sande, June 2021.
+
+***
+
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2023* [**&#9650;**](#top)
+<span id="bottom">&nbsp;</span>
+
+<!-- link refs -->
+
+[blog_soares]: https://blog.logrocket.com/comparing-dart-typescript/
+[blog_thomsen_dart3]: https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa
+[blog_thomsen_dart218]: https://medium.com/dartlang/dart-2-18-f4b3101f146c
+[blog_thomsen_dart217]: https://medium.com/dartlang/dart-2-17-b216bfc80c5d
+[blog_thomsen_dart216]: https://medium.com/dartlang/dart-2-16-improved-tooling-and-platform-handling-dd87abd6bad1
+[blog_thomsen_dart215]: https://medium.com/dartlang/dart-2-15-7e7a598e508a
+[blog_thomsen_dart214]: https://medium.com/dartlang/announcing-dart-2-14-b48b9bb2fb67
+[blog_thomsen_dart213]: https://medium.com/dartlang/announcing-dart-2-13-c6d547b57067
+[book_buckett]: https://www.manning.com/books/dart-in-action
+[tutorial_sande]: https://www.raywenderlich.com/22685966-dart-basics
