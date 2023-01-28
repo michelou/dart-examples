@@ -10,14 +10,17 @@
 
 ## <span id="articles">Articles</span>
 
-
 ## <span id="blogs">Blogs</span>
 
+- [Dart Futures: The Fundamentals](https://betterprogramming.pub/introduction-to-futures-in-dart-4edf6db3da90) by Darsshan Nair, December 2022.
 - [The road to Dart 3: A fully sound, null safe language][blog_thomsen_dart3] by Michael_Thomsen, December 2022.
 - [Comparing Dart and TypeScript][blog_soares] by Will Soares, November 2022.
-- [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218] by Michael Thomsen, August 2022.
-- [Dart 2.17: Productivity and integration][blog_thomsen_dart217] by Michael Thomsen, May 2022.
-- [Dart 2.16: Improved tooling and platform handling][blog_thomsen_dart216] by Michael Thomsen, February 2022.
+- [Medium &ndash; Dart Language](https://medium.com/dartlang) by Michael Thomsen :
+  - [Introducing Dart 3 alpha](https://medium.com/dartlang/dart-3-alpha-f1458fb9d232), January 2023.
+  - [The road to Dart 3: A fully sound, null safe language](https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa), December 2022.
+  - [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218], August 2022.
+  - [Dart 2.17: Productivity and integration][blog_thomsen_dart217], May 2022.
+  - [Dart 2.16: Improved tooling and platform handling][blog_thomsen_dart216], February 2022.
 - [Announcing Dart 2.15][blog_thomsen_dart215] by Michael Thomsen, December 2021.
 - [Announcing Dart 2.14][blog_thomsen_dart214] by Michael Thomsen, September 2021.
 - [Announcing Dart 2.13][blog_thomsen_dart213] by Michael Thomsen, May 2021.
@@ -32,11 +35,13 @@
 
 ## <span id="tutorials">Tutorials</span>
 
+- [Dart Tutorial](https://mindmajix.com/dart-tutorial) by Sowmithri Viswanath, 2022.
 - [Dart Basics][tutorial_sande] by Jonathan Sande, June 2021.
+- [Dart Tutorial &ndash; Learning the Dart programming language](https://www.vogella.com/tutorials/Dart/article.html) by Lars Vogel, February 2021.
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

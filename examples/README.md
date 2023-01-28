@@ -11,7 +11,7 @@
   </tr>
 </table>
 
-## <span id="hello_dart">Example `hello-dart`</span>
+## <span id="hello_dart">`hello-dart` Example</span>
 
 Command [`build.bat`](./hello-dart/build.bat) generates the executable `hello-dart.exe` from source file [`main.dart`](./hello-dart/src/main/dart/main.dart) and execute it.
 
@@ -29,9 +29,9 @@ Running command [`build.bat`](./hello-dart/build.bat) with option `-debug` inste
 <b>&gt; <a href="./hello-dart/build.bat">build</a> -debug clean run</b>
 [build] Options    : _TARGET= _TIMER=0 _VERBOSE=0
 [build] Subcommands: _CLEAN=1 _COMPILE=1 _RUN=1
-[build] Variables  : "DART_HOME=C:\opt\dart-sdk-2.18.7"
+[build] Variables  : "DART_HOME=C:\opt\dart-sdk-2.19.0"
 [build] rmdir /s /q "T:\examples\hello-dart\target"
-[build] "C:\opt\dart-sdk-2.18.7\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
+[build] "C:\opt\dart-sdk-2.19.0\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
 Compiling T:\examples\hello-dart\src\main\dart\main.dart to T:\examples\hello-dart\target\hello-dart.exe using format exe:
 Generating AOT kernel dill.
 Info: Compiling with sound null safety
@@ -45,7 +45,7 @@ Hello, World!
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
