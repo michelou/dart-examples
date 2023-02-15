@@ -1,4 +1,4 @@
-# <span id="top">Playing with Dart 2 on Windows</span>
+# <span id="top">Playing with Dart 3 on Windows</span>
 
 <table style="font-family:Helvetica,Arial;font-size:12px;line-height:1.6;">
   <tr>
@@ -6,8 +6,8 @@
     <a href="https://dart.dev/" rel="external"><img style="border:0;" src="docs/images/dart-lang.png" alt="Dart project"/></a>
   </td>
   <td style="border:0;padding:0;vertical-align:text-top;">
-    This repository gathers <a href="https://dart.dev/" rel="external">Dart 2</a> code examples coming from various websites - mostly from the <a href="https://dart.dev" rel="external">Dart</a> project - or written by myself.<br/>
-    In particular it includes several build scripts (<a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://www.gnu.org/software/bash/manual/bash.html" rel="external">Bash scripts</a>) for experimenting with the <a href="https://dart.dev/guides/language/spec" rel="external">Dart 2</a> language on a Windows machine.
+    This repository gathers <a href="https://dart.dev/" rel="external">Dart 3</a> code examples coming from various websites - mostly from the <a href="https://dart.dev" rel="external">Dart</a> project - or written by myself.<br/>
+    In particular it includes several build scripts (<a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://www.gnu.org/software/bash/manual/bash.html" rel="external">Bash scripts</a>) for experimenting with the <a href="https://dart.dev/guides/language/spec" rel="external">Dart 3</a> language on a Windows machine.
   </td>
   </tr>
 </table>
@@ -18,7 +18,7 @@
 
 This project depends on the following external software for the **Microsoft Windows** platform:
 
-- [Dart 2][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
+- [Dart 3][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
 - [Git 2.39][git_releases] ([*release notes*][git_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
@@ -27,8 +27,8 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*February 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-2.19.0\   <i>(633 MB)</i>
-C:\opt\Git-2.39.1\        <i>(314 MB)</i>
+C:\opt\dart-sdk-3.0.0\   <i>(633 MB)</i>
+C:\opt\Git-2.39.1\       <i>(314 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
