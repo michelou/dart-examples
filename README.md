@@ -1,6 +1,6 @@
 # <span id="top">Playing with Dart 3 on Windows</span>
 
-<table style="font-family:Helvetica,Arial;font-size:12px;line-height:1.6;">
+<table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:60px;max-width:100px;">
     <a href="https://dart.dev/" rel="external"><img style="border:0;" src="docs/images/dart-lang.png" alt="Dart project"/></a>
@@ -27,8 +27,8 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*February 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-3.0.0\   <i>(633 MB)</i>
-C:\opt\Git-2.39.1\       <i>(314 MB)</i>
+C:\opt\dart-sdk-3.0.0\   <i>(535 MB)</i>
+C:\opt\Git-2.39.2\       <i>(314 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -90,7 +90,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 </p>
 <pre style="font-size:80%;">
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(194 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.39.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.39.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -111,7 +111,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.39.2.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
