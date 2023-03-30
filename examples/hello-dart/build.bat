@@ -201,7 +201,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% rmdir /s /q "%__DIR%" 1>&2
 ) else if %_VERBOSE%==1 ( echo Delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
 )
 rmdir /s /q "%__DIR%"
-if not %ERRORLEVEL%==0 (
+if not errorlevel 0 (
     echo %_ERROR_LABEL% Failed to delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -230,7 +230,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" compile exe %__SOURCE_FILES% 
 ) else if %_VERBOSE%==1 echo Compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_DART_CMD%" compile exe %__SOURCE_FILES% %__DART_OPTS% %_STDOUT_REDIRECT%
-if not %ERRORLEVEL%==0 (
+if not errorlevel 0 (
     echo %_ERROR_LABEL% Failed to compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -247,7 +247,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 
 ) else if %_VERBOSE%==1 ( echo Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
 )
 call "%_EXE_FILE%"
-if not %ERRORLEVEL%==0 (
+if not errorlevel 0 (
     echo %_DEBUG_LABEL% Failed to execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
