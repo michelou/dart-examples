@@ -24,12 +24,16 @@
   - [Announcing Dart 2.15][blog_thomsen_dart215], December 2021.
   - [Announcing Dart 2.14][blog_thomsen_dart214], September 2021.
   - [Announcing Dart 2.13][blog_thomsen_dart213], May 2021.
-2022.
+- [Quickbird Blog](https://quickbirdstudios.com/blog/) :
+  - [Understanding Dart Memory: Weak References and Finalizers Demystified](https://quickbirdstudios.com/blog/dart-weak-references-finalizers/) by Marvin März, January 2023.
+  - [Use Dart Mixins More Often! Here is Why…](https://quickbirdstudios.com/blog/flutter-dart-mixins/) by Marvin März, October 2021.
+  - [Dart Extension Methods](https://quickbirdstudios.com/blog/dart-extension-methods/) by Julian Bissekkou, November 2020.
 - [Dart Futures: The Fundamentals](https://betterprogramming.pub/introduction-to-futures-in-dart-4edf6db3da90) by Darsshan Nair, December 2022.
 - [The road to Dart 3: A fully sound, null safe language][blog_thomsen_dart3] by Michael Thomsen, December 2022.
 - [Comparing Dart and TypeScript][blog_soares] by Will Soares, November 2022.
+- [Mastering Dart Collections](https://proandroiddev.com/mastering-dart-collections-dd27f1df5677) by Denis Cràciunescu, July 2021.
 
-## <span id="books">Books</span>
+## <span id="books">Books</span> [**&#x25B4;**](#top)
 
 - [Dart in Action][book_buckett] by Chris Buckett, January 2013.<br/><span style="font-size:90%;">(Manning, ISBN 978-1-6172-9086-2, 424 pages)</span>
 
@@ -41,6 +45,12 @@
 ## <span id="news">News</span>
 
 - [Twitter &ndash; Dart Language](https://twitter.com/dart_home).
+
+## <span id="tools">Tools</span>
+
+- [DartPad](https://dartpad.dev/) &ndash; an online [Dart][dart_home] editor with support for console, web, and Flutter apps.
+- [Official Dart lint rules](https://pub.dev/packages/lints) &ndash; a static analyzer for [Dart][dart_home].
+- [Protocol Buffer Basics: Dart](https://protobuf.dev/getting-started/darttutorial/) &ndash; working with protocol buffers in [Dart][dart_home].
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -67,4 +77,4 @@
 [book_buckett]: https://www.manning.com/books/dart-in-action
 [dart_home]: https://dart.dev/
 [flutter_home]: https://flutter.dev/
-[tutorial_sande]: https://www.raywenderlich.com/22685966-dart-basics
+[tutorial_sande]: https://www.kodeco.com/22685966-dart-basics
