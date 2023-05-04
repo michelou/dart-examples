@@ -24,11 +24,11 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [`/opt/`][unix_opt] directory on Unix).
 
-For instance our development environment looks as follows (*February 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*May 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\dart-sdk-3.0.0\   <i>(535 MB)</i>
-C:\opt\Git-2.40.0\       <i>(314 MB)</i>
+C:\opt\Git-2.40.1\       <i>(314 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -81,10 +81,10 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
        help        display this help message
    &nbsp;
    <b>&gt; <a href="">where</a> git sh</b>
-   C:\opt\Git-2.40.0\bin\git.exe
-   C:\opt\Git-2.40.0\mingw64\bin\git.exe
-   C:\opt\Git-2.40.0\bin\sh.exe
-   C:\opt\Git-2.40.0\usr\bin\sh.exe
+   C:\opt\Git-2.40.1\bin\git.exe
+   C:\opt\Git-2.40.1\mingw64\bin\git.exe
+   C:\opt\Git-2.40.1\bin\sh.exe
+   C:\opt\Git-2.40.1\usr\bin\sh.exe
    </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -96,7 +96,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 </p>
 <pre style="font-size:80%;">
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(194 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.40.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.40.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -108,7 +108,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 <dd>It is similar to the setup scripts described on the page <a href="https://learn.microsoft.com/en-us/visualstudio/ide/reference/command-prompt-powershell" rel="external">"Visual Studio Developer Command Prompt and Developer PowerShell"</a> of the <a href="https://learn.microsoft.com/en-us/visualstudio/windows" rel="external">Visual Studio</a> online documentation.
 </dd>
 <dd>
-For instance we can quickly check that the two scripts <code>Launch-VsDevShell.ps1</code> and <code>VsDevCmd.bat</code> are indeed available in our Visual Studio 2019 installation :
+For instance we can quickly check that the two scripts <code><b>Launch-VsDevShell.ps1</b></code> and <code><b>VsDevCmd.bat</b></code> are indeed available in our Visual Studio 2019 installation :
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where" rel="external">where</a> /r "C:\Program Files (x86)\Microsoft Visual Studio" *vsdev*</b>
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\Launch-VsDevShell.ps1
@@ -118,12 +118,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\vsde
 </pre>
 </dd>
 <dd>
-Concretely, <code>setenv.bat</code> in our GitHub projects which depend on Visual Studio (e.g. <a href="https://github.com/michelou/cpp-examples"><code>michelou/cpp-examples</code></a>) do invoke <code>VsDevCmd.bat</code> (resp. <code>vcvarall.bat</code> for older Visual Studio versions) to setup the Visual Studio tools on the command prompt. 
+Concretely, <code><b>setenv.bat</b></code> in our GitHub projects which depend on Visual Studio (e.g. <a href="https://github.com/michelou/cpp-examples"><code>michelou/cpp-examples</code></a>) do invoke <code><b>VsDevCmd.bat</b></code> (resp. <code><b>vcvarall.bat</b></code> for older Visual Studio versions) to setup the Visual Studio tools on the command prompt. 
 </dd></dl>
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -138,7 +138,7 @@ Concretely, <code>setenv.bat</code> in our GitHub projects which depend on Visua
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.1.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples
