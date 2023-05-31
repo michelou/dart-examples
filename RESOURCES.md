@@ -16,6 +16,7 @@
 
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) by Michael Thomsen :
+  - [Announcing Dart 3](https://medium.com/dartlang/announcing-dart-3-53f065a10635), May 2023.
   - [Introducing Dart 3 alpha](https://medium.com/dartlang/dart-3-alpha-f1458fb9d232), January 2023.
   - [The road to Dart 3: A fully sound, null safe language](https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa), December 2022.
   - [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218], August 2022.
@@ -44,7 +45,7 @@
 
 ## <span id="news">News</span>
 
-- [Twitter &ndash; Dart Language](https://twitter.com/dart_home).
+- [Twitter &ndash; Dart Language](https://twitter.com/dart_lang).
 
 ## <span id="tools">Tools</span>
 
@@ -60,7 +61,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/May 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
