@@ -19,7 +19,7 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Dart 3][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
-- [Git 2.40][git_releases] ([*release notes*][git_relnotes])
+- [Git 2.41][git_releases] ([*release notes*][git_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [`/opt/`][unix_opt] directory on Unix).
@@ -27,8 +27,8 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*June 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-3.0.2\   <i>(545 MB)</i>
-C:\opt\Git-2.40.1\       <i>(314 MB)</i>
+C:\opt\dart-sdk-3.0.3\   <i>(542 MB)</i>
+C:\opt\Git-2.41.0\       <i>(358 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -81,10 +81,10 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
        help        display this help message
    &nbsp;
    <b>&gt; <a href="">where</a> git sh</b>
-   C:\opt\Git-2.40.1\bin\git.exe
-   C:\opt\Git-2.40.1\mingw64\bin\git.exe
-   C:\opt\Git-2.40.1\bin\sh.exe
-   C:\opt\Git-2.40.1\usr\bin\sh.exe
+   C:\opt\Git-2.41.0\bin\git.exe
+   C:\opt\Git-2.41.0\mingw64\bin\git.exe
+   C:\opt\Git-2.41.0\bin\sh.exe
+   C:\opt\Git-2.41.0\usr\bin\sh.exe
    </pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
@@ -96,7 +96,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 </p>
 <pre style="font-size:80%;">
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(194 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.40.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.41.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -138,7 +138,7 @@ Concretely, <code><b>setenv.bat</b></code> in our GitHub projects which depend o
 [flix_examples]: https://github.com/michelou/flix-examples
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.40.1.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.41.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples
 [graalvm_examples]: https://github.com/michelou/graalvm-examples

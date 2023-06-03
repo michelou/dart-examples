@@ -25,6 +25,7 @@
   - [Announcing Dart 2.15][blog_thomsen_dart215], December 2021.
   - [Announcing Dart 2.14][blog_thomsen_dart214], September 2021.
   - [Announcing Dart 2.13][blog_thomsen_dart213], May 2021.
+  - [Announcing sound null safety](https://pkg.go.dev/database/sql) by Filip Hracek, June 2020.
 - [Quickbird Blog](https://quickbirdstudios.com/blog/) :
   - [Understanding Dart Memory: Weak References and Finalizers Demystified](https://quickbirdstudios.com/blog/dart-weak-references-finalizers/) by Marvin März, January 2023.
   - [Use Dart Mixins More Often! Here is Why…](https://quickbirdstudios.com/blog/flutter-dart-mixins/) by Marvin März, October 2021.
