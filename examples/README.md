@@ -29,9 +29,9 @@ Running command [`build.bat`](./hello-dart/build.bat) with option `-debug` inste
 <b>&gt; <a href="./hello-dart/build.bat">build</a> -debug clean run</b>
 [build] Options    : _TARGET= _TIMER=0 _VERBOSE=0
 [build] Subcommands: _CLEAN=1 _COMPILE=1 _RUN=1
-[build] Variables  : "DART_HOME=C:\opt\dart-sdk-3.0.0"
+[build] Variables  : "DART_HOME=C:\opt\dart-sdk-3.0.4"
 [build] rmdir /s /q "T:\examples\hello-dart\target"
-[build] "C:\opt\dart-sdk-3.0.0\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
+[build] "C:\opt\dart-sdk-3.0.4\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
 Compiling T:\examples\hello-dart\src\main\dart\main.dart to T:\examples\hello-dart\target\hello-dart.exe using format exe:
 Generating AOT kernel dill.
 Info: Compiling with sound null safety
@@ -41,6 +41,21 @@ Generated: T:\examples\hello-dart\target\hello-dart.exe
 [build] Execute program "target\hello-dart.exe"
 Hello, World!
 [build] _EXITCODE=0
+</pre>
+
+## <span id="enums">`enums` Example</span>
+
+Command [`build.bat`](./enums/build.bat) generates the executable `enums.exe` from source file [`main.dart`](./enums/src/main/dart/main.dart) and execute it.
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./enums/build.bat">build</a> -verbose run</b>
+Compile 1 Dart source file into directory "target"
+Execute program "target\enums.exe"
+The venus planet is not a "giant planet".
+blue
+Color.blue
+A car is a vehicle with 4 tires.
+80
 </pre>
 
 ***

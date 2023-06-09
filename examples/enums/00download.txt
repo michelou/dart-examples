@@ -1,0 +1,2 @@
+Source 1: https://dart.dev/language#enums
+Source 2: https://dart.dev/language/enums#declaring-simple-enums

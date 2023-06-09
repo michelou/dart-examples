@@ -33,10 +33,14 @@
 - [Dart Futures: The Fundamentals](https://betterprogramming.pub/introduction-to-futures-in-dart-4edf6db3da90) by Darsshan Nair, December 2022.
 - [The road to Dart 3: A fully sound, null safe language][blog_thomsen_dart3] by Michael Thomsen, December 2022.
 - [Comparing Dart and TypeScript][blog_soares] by Will Soares, November 2022.
+- [Dart: The Features I Wish It Had][blog_zurek] by Alex Zurek, August 2021.
 - [Mastering Dart Collections](https://proandroiddev.com/mastering-dart-collections-dd27f1df5677) by Denis Cràciunescu, July 2021.
+- [Interesting Features of the Dart Programming Language](https://renato.athaydes.com/posts/interesting-dart-features.html) by Renato Athaydes, July 2019.
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Quick Start Guide to Dart Programming][book_sinha] by Sanjib Sinha, November 2019.<br/><span style="font-size:90%;">(Apress, ISBN 978-1-4842-5562-9)</span>
+- [The Dart Programming Language][book_bracha] by Gilad Bracha, July 2015.<br/><span style="font-size:90%;">(Addison-Wesley, ISBN 978-03219-2770-5, 201 pages)</span>
 - [Dart in Action][book_buckett] by Chris Buckett, January 2013.<br/><span style="font-size:90%;">(Manning, ISBN 978-1-6172-9086-2, 424 pages)</span>
 
 ## <span id="community">Community</span>
@@ -76,7 +80,10 @@
 [blog_thomsen_dart215]: https://medium.com/dartlang/dart-2-15-7e7a598e508a
 [blog_thomsen_dart214]: https://medium.com/dartlang/announcing-dart-2-14-b48b9bb2fb67
 [blog_thomsen_dart213]: https://medium.com/dartlang/announcing-dart-2-13-c6d547b57067
+[blog_zurek]: https://spin.atomicobject.com/2021/08/12/dart-features/
+[book_bracha]: https://www.abebooks.com/9780321927705/Dart-Programming-Language-Bracha-Gilad-0321927702/plp
 [book_buckett]: https://www.manning.com/books/dart-in-action
+[book_sinha]: https://www.oreilly.com/library/view/quick-start-guide/9781484255629/
 [dart_home]: https://dart.dev/
 [flutter_home]: https://flutter.dev/
 [tutorial_sande]: https://www.kodeco.com/22685966-dart-basics
