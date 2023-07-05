@@ -25,9 +25,12 @@
   - [Announcing Dart 2.15][blog_thomsen_dart215], December 2021.
   - [Announcing Dart 2.14][blog_thomsen_dart214], September 2021.
   - [Announcing Dart 2.13][blog_thomsen_dart213], May 2021.
+  - [Announcing Dart 2.12][blog_thomson_dart212], March 2021.
   - [Announcing sound null safety](https://pkg.go.dev/database/sql) by Filip Hracek, June 2020.
 - [Quickbird Blog](https://quickbirdstudios.com/blog/) :
+  - [Class Modifiers in Dart: Sealed, Interface, Base](https://quickbirdstudios.com/blog/flutter-dart-class-modifiers/) by Marvin März, June 2023.
   - [Understanding Dart Memory: Weak References and Finalizers Demystified](https://quickbirdstudios.com/blog/dart-weak-references-finalizers/) by Marvin März, January 2023.
+  - [Handling Exceptions in Dart & Flutter](https://quickbirdstudios.com/blog/handling-exceptions-flutter-dart/) by Marvin März, May 2022.
   - [Use Dart Mixins More Often! Here is Why…](https://quickbirdstudios.com/blog/flutter-dart-mixins/) by Marvin März, October 2021.
   - [Dart Extension Methods](https://quickbirdstudios.com/blog/dart-extension-methods/) by Julian Bissekkou, November 2020.
 - [Dart Futures: The Fundamentals](https://betterprogramming.pub/introduction-to-futures-in-dart-4edf6db3da90) by Darsshan Nair, December 2022.
@@ -39,6 +42,7 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Data Strucutres &amp; Algorithms in Dart][book_sande] by Jonathan Sande et al., January 2022.<br/><span style="font-size:80%;">(Razeware, ISBN 978-1-9503-2557-3, 458 pages)</span>
 - [Quick Start Guide to Dart Programming][book_sinha] by Sanjib Sinha, November 2019.<br/><span style="font-size:90%;">(Apress, ISBN 978-1-4842-5562-9)</span>
 - [The Dart Programming Language][book_bracha] by Gilad Bracha, July 2015.<br/><span style="font-size:90%;">(Addison-Wesley, ISBN 978-03219-2770-5, 201 pages)</span>
 - [Dart in Action][book_buckett] by Chris Buckett, January 2013.<br/><span style="font-size:90%;">(Manning, ISBN 978-1-6172-9086-2, 424 pages)</span>
@@ -66,7 +70,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -80,9 +84,11 @@
 [blog_thomsen_dart215]: https://medium.com/dartlang/dart-2-15-7e7a598e508a
 [blog_thomsen_dart214]: https://medium.com/dartlang/announcing-dart-2-14-b48b9bb2fb67
 [blog_thomsen_dart213]: https://medium.com/dartlang/announcing-dart-2-13-c6d547b57067
+[blog_thomson_dart212]: https://medium.com/dartlang/announcing-dart-2-12-499a6e689c87
 [blog_zurek]: https://spin.atomicobject.com/2021/08/12/dart-features/
 [book_bracha]: https://www.abebooks.com/9780321927705/Dart-Programming-Language-Bracha-Gilad-0321927702/plp
 [book_buckett]: https://www.manning.com/books/dart-in-action
+[book_sande]: https://www.amazon.com/Data-Structures-Algorithms-Dart-First/dp/1950325571
 [book_sinha]: https://www.oreilly.com/library/view/quick-start-guide/9781484255629/
 [dart_home]: https://dart.dev/
 [flutter_home]: https://flutter.dev/
