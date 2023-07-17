@@ -15,17 +15,18 @@
 ## <span id="blogs">Blogs</span>
 
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
-- [Medium &ndash; Dart Language](https://medium.com/dartlang) by Michael Thomsen :
-  - [Announcing Dart 3](https://medium.com/dartlang/announcing-dart-3-53f065a10635), May 2023.
-  - [Introducing Dart 3 alpha](https://medium.com/dartlang/dart-3-alpha-f1458fb9d232), January 2023.
-  - [The road to Dart 3: A fully sound, null safe language](https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa), December 2022.
-  - [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218], August 2022.
-  - [Dart 2.17: Productivity and integration][blog_thomsen_dart217], May 2022.
-  - [Dart 2.16: Improved tooling and platform handling][blog_thomsen_dart216], February 2022.
-  - [Announcing Dart 2.15][blog_thomsen_dart215], December 2021.
-  - [Announcing Dart 2.14][blog_thomsen_dart214], September 2021.
-  - [Announcing Dart 2.13][blog_thomsen_dart213], May 2021.
-  - [Announcing Dart 2.12][blog_thomson_dart212], March 2021.
+- [Medium &ndash; Dart Language](https://medium.com/dartlang) :
+  - [Dart DevTools: Analyzing application performance with the CPU Profiler](https://medium.com/dartlang/dart-devtools-analyzing-application-performance-with-the-cpu-profiler-3e94a0ec06ae) by Ben Konyi, June 2023.
+  - [Announcing Dart 3](https://medium.com/dartlang/announcing-dart-3-53f065a10635) by Michael Thomsen, May 2023.
+  - [Introducing Dart 3 alpha](https://medium.com/dartlang/dart-3-alpha-f1458fb9d232) by Michael Thomsen, January 2023.
+  - [The road to Dart 3: A fully sound, null safe language](https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa) by Michael Thomsen, December 2022.
+  - [Dart 2.18: Objective-C & Swift interop][blog_thomsen_dart218] by Michael Thomsen, August 2022.
+  - [Dart 2.17: Productivity and integration][blog_thomsen_dart217] by Michael Thomsen, May 2022.
+  - [Dart 2.16: Improved tooling and platform handling][blog_thomsen_dart216] by Michael Thomsen, February 2022.
+  - [Announcing Dart 2.15][blog_thomsen_dart215] by Michael Thomsen, December 2021.
+  - [Announcing Dart 2.14][blog_thomsen_dart214] by Michael Thomsen, September 2021.
+  - [Announcing Dart 2.13][blog_thomsen_dart213] by Michael Thomsen, May 2021.
+  - [Announcing Dart 2.12][blog_thomson_dart212] by Michael Thomsen, March 2021.
   - [Announcing sound null safety](https://pkg.go.dev/database/sql) by Filip Hracek, June 2020.
 - [Quickbird Blog](https://quickbirdstudios.com/blog/) :
   - [Class Modifiers in Dart: Sealed, Interface, Base](https://quickbirdstudios.com/blog/flutter-dart-class-modifiers/) by Marvin März, June 2023.
@@ -42,13 +43,17 @@
 
 ## <span id="books">Books</span> [**&#x25B4;**](#top)
 
+- [Dart by Example](https://www.jpryan.me/dartbyexample/) (*online book*) by [John Ryan](https://github.com/johnpryan).
 - [Data Strucutres &amp; Algorithms in Dart][book_sande] by Jonathan Sande et al., January 2022.<br/><span style="font-size:80%;">(Razeware, ISBN 978-1-9503-2557-3, 458 pages)</span>
+- [Essential Dart](https://www.programming-books.io/essential/dart/) (*online book*) by Krzysztof Kowalczyk.
 - [Quick Start Guide to Dart Programming][book_sinha] by Sanjib Sinha, November 2019.<br/><span style="font-size:90%;">(Apress, ISBN 978-1-4842-5562-9)</span>
 - [The Dart Programming Language][book_bracha] by Gilad Bracha, July 2015.<br/><span style="font-size:90%;">(Addison-Wesley, ISBN 978-03219-2770-5, 201 pages)</span>
+- [Mastering Dart][book_akopkokhyants] by Sergey Akopkokhyants, November 2014.<br/><span style="font-size:80%;">(Packt, ISBN 978-1-78398-956-0, 346 pages)</span>.
 - [Dart in Action][book_buckett] by Chris Buckett, January 2013.<br/><span style="font-size:90%;">(Manning, ISBN 978-1-6172-9086-2, 424 pages)</span>
 
 ## <span id="community">Community</span>
 
+- [GitHub &ndash; Clean Code in Dart](https://github.com/williambarreiro/clean-code-dart) by William Barreiro.
 - [GitHub &ndash; Waleed Arshad](https://github.com/wal33d006)
 - [pub.dev](https://pub.dev/packages?q=sdk%3Adart) &ndash; the official package repository for [Dart][dart_home] and [Flutter][flutter_home] apps.
 
@@ -86,6 +91,7 @@
 [blog_thomsen_dart213]: https://medium.com/dartlang/announcing-dart-2-13-c6d547b57067
 [blog_thomson_dart212]: https://medium.com/dartlang/announcing-dart-2-12-499a6e689c87
 [blog_zurek]: https://spin.atomicobject.com/2021/08/12/dart-features/
+[book_akopkokhyants]: https://www.packtpub.com/product/mastering-dart/9781783989560
 [book_bracha]: https://www.abebooks.com/9780321927705/Dart-Programming-Language-Bracha-Gilad-0321927702/plp
 [book_buckett]: https://www.manning.com/books/dart-in-action
 [book_sande]: https://www.amazon.com/Data-Structures-Algorithms-Dart-First/dp/1950325571
