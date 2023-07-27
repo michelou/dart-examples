@@ -24,8 +24,8 @@
             <Keywords name="Folders in comment, open"></Keywords>
             <Keywords name="Folders in comment, middle"></Keywords>
             <Keywords name="Folders in comment, close"></Keywords>
-            <Keywords name="Keywords1">break case class const default enum extends false final get implements new required return switch this true var</Keywords>
-            <Keywords name="Keywords2">bool int void</Keywords>
+            <Keywords name="Keywords1">abstract as assert async await break case catch class const continue default do dynamic else enum extends factory false final finally for get if implements import in interface is mixin new null on operator rethrow return set show static super switch sync this throw true try typedef var void while with yield</Keywords>
+            <Keywords name="Keywords2">bool double int void Enum Future Iterable List Map Never Object Set Stream String Symbol</Keywords>
             <Keywords name="Keywords3">round</Keywords>
             <Keywords name="Keywords4"></Keywords>
             <Keywords name="Keywords5"></Keywords>
@@ -39,7 +39,7 @@
             <WordsStyle name="COMMENTS" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="LINE COMMENTS" fgColor="008000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="NUMBERS" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
-            <WordsStyle name="KEYWORDS1" fgColor="FF3737" bgColor="FFFFFF" fontStyle="1" nesting="0" />
+            <WordsStyle name="KEYWORDS1" fgColor="0000FF" bgColor="FFFFFF" fontStyle="1" nesting="0" />
             <WordsStyle name="KEYWORDS2" fgColor="0080FF" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS3" fgColor="FF8000" bgColor="FFFFFF" fontStyle="0" nesting="0" />
             <WordsStyle name="KEYWORDS4" fgColor="000000" bgColor="FFFFFF" fontStyle="0" nesting="0" />

@@ -26,6 +26,10 @@ if %_CLEAN%==1 (
     call :clean
     if not !_EXITCODE!==0 goto end
 )
+if %_LINT%==1 (
+    call :lint
+    if not !_EXITCODE!==0 goto end
+)
 if %_COMPILE%==1 (
     call :compile
     if not !_EXITCODE!==0 goto end
@@ -114,6 +118,7 @@ goto :eof
 set _CLEAN=0
 set _COMPILE=0
 set _HELP=0
+set _LINT=0
 set _RUN=0
 set _TIMER=0
 set _VERBOSE=0
@@ -141,6 +146,7 @@ if "%__ARG:~0,1%"=="-" (
     if "%__ARG%"=="clean" ( set _CLEAN=1
     ) else if "%__ARG%"=="compile" ( set _COMPILE=1
     ) else if "%__ARG%"=="help" ( set _HELP=1
+    ) else if "%__ARG%"=="lint" ( set _LINT=1
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
     ) else (
         echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
@@ -157,7 +163,7 @@ if %_DEBUG%==1 set _STDOUT_REDIRECT=
 
 if %_DEBUG%==1 (
     echo %_DEBUG_LABEL% Options    : _TARGET=%_TARGET% _TIMER=%_TIMER% _VERBOSE=%_VERBOSE% 1>&2
-    echo %_DEBUG_LABEL% Subcommands: _CLEAN=%_CLEAN% _COMPILE=%_COMPILE% _RUN=%_RUN% 1>&2
+    echo %_DEBUG_LABEL% Subcommands: _CLEAN=%_CLEAN% _COMPILE=%_COMPILE% _LINT=%_LINT% _RUN=%_RUN% 1>&2
     echo %_DEBUG_LABEL% Variables  : "DART_HOME=%DART_HOME%" 1>&2
     echo %_DEBUG_LABEL% Variables  : "GIT_HOME=%GIT_HOME%" 1>&2
 )
@@ -184,8 +190,9 @@ echo     %__BEG_O%-verbose%__END%    display progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%clean%__END%       delete generated files
-echo     %__BEG_O%compile%__END%     generate class files
+echo     %__BEG_O%compile%__END%     generate executable files
 echo     %__BEG_O%help%__END%        display this help message
+echo     %__BEG_O%lint%__END%        analyze Dart source files with Lint
 echo     %__BEG_O%run%__END%         execute the generated program
 goto :eof
 
@@ -203,6 +210,21 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% rmdir /s /q "%__DIR%" 1>&2
 rmdir /s /q "%__DIR%"
 if not errorlevel 0 (
     echo %_ERROR_LABEL% Failed to delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+goto :eof
+
+:lint
+set __DART_OPTS=
+if %_DEBUG%==1 set __DART_OPTS=--verbose %__DART_OPTS%
+
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\dart" %__DART_OPTS%
+) else if %_VERBOSE%==1 echo Analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
+)
+call "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\dart" %__DART_OPTS% %_STDOUT_REDIRECT%
+if not errorlevel 0 (
+    echo %_ERROR_LABEL% Failed to analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -239,7 +261,7 @@ goto :eof
 
 :run
 if not exist "%_EXE_FILE%" (
-    echo %_DEBUG_LABEL% Execute program "!_EXE_FILE:%_ROOT_DIR%=!" not found 1>&2
+    echo %_DEBUG_LABEL% Main program "!_EXE_FILE:%_ROOT_DIR%=!" not found 1>&2
     set _EXITCODE=1
     goto :eof
 )

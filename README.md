@@ -38,6 +38,7 @@ C:\opt\Git-2.41.0\       <i>(358 MB)</i>
 This project is organized as follows:
 
 <pre style="font-size:80%;">
+dartbyexample\{<a href="dartbyexample/README.md">README.md</a>}, <a href="dartbyexample/exceptions/">exceptions</a>, ..}
 docs\
 examples\{<a href="examples/README.md">README.md</a>, <a href="examples/hello-dart/">hello-dart</a>, ..}
 README.md
