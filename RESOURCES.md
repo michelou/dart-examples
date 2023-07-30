@@ -14,6 +14,15 @@
 
 ## <span id="blogs">Blogs</span>
 
+- [Christian's Blog](https://www.christianfindlay.com/blog/) :
+  - [Dart 3: A Comprehensive Guide to Records and Futures](https://www.christianfindlay.com/blog/dart-records-and-futures), May 2023.
+  - [Dart Switch Expressions](https://www.christianfindlay.com/blog/dart-switch-expressions), May 2023.
+  - [Dart Immutable Collections](https://www.christianfindlay.com/blog/dart-immutable-collections), September 2022.
+  - [Dart Classes for C# Programmers](https://www.christianfindlay.com/blog/dart-classes), September 2021.
+  - [Flutter: First Impressions](https://www.christianfindlay.com/blog/flutter-first-impressions), September 2021.
+- [Flutter &amp; Dart Blog](https://stevenosse.com/flutter-and-dart) by Steve Nosse :
+  - [Dart 3 in depth: New class modifiers](https://stevenosse.com/dart-3-in-depth-new-class-modifiers), April 2023.
+  - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
   - [Dart DevTools: Analyzing application performance with the CPU Profiler](https://medium.com/dartlang/dart-devtools-analyzing-application-performance-with-the-cpu-profiler-3e94a0ec06ae) by Ben Konyi, June 2023.
@@ -53,11 +62,13 @@
 
 ## <span id="community">Community</span>
 
+- [`dart_eval`](https://pub.dev/packages/dart_eval) &ndash; an extensible bytecode compiler and interpreter for [Dart][dart_home].
+- [`dart2java`](https://m-sp.org/) by Matthias Spring, 2017.
 - [GitHub &ndash; Clean Code in Dart](https://github.com/williambarreiro/clean-code-dart) by William Barreiro.
 - [GitHub &ndash; Waleed Arshad](https://github.com/wal33d006)
 - [pub.dev](https://pub.dev/packages?q=sdk%3Adart) &ndash; the official package repository for [Dart][dart_home] and [Flutter][flutter_home] apps.
 
-## <span id="news">News</span>
+## <span id="news">News</span> [**&#x25B4;**](#top)
 
 - [Twitter &ndash; Dart Language](https://twitter.com/dart_lang).
 
@@ -67,15 +78,20 @@
 - [Official Dart lint rules](https://pub.dev/packages/lints) &ndash; a static analyzer for [Dart][dart_home].
 - [Protocol Buffer Basics: Dart](https://protobuf.dev/getting-started/darttutorial/) &ndash; working with protocol buffers in [Dart][dart_home].
 
+## <span id="talks">Talks</span>
+
+- [Building an Optimising Compiler for Dart](https://www.infoq.com/presentations/dart-compiler/) (*31 minutes*) by Vyacheslav Egorov, January 2014.
+
 ## <span id="tutorials">Tutorials</span>
 
 - [Dart Tutorial](https://mindmajix.com/dart-tutorial) by Sowmithri Viswanath, 2022.
 - [Dart Basics][tutorial_sande] by Jonathan Sande, June 2021.
+- [Parctical Dart - Exercises for Beginners](https://hackmd.io/@kuzmapetrovich/S1x90jWGP) by Kuzma Petrovich, 2021.
 - [Dart Tutorial &ndash; Learning the Dart programming language](https://www.vogella.com/tutorials/Dart/article.html) by Lars Vogel, February 2021.
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

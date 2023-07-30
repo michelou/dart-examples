@@ -14,6 +14,8 @@
 
 [Ada][ada_examples], [Akka][akka_examples], [Deno][deno_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Node.js][nodejs_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other trending topics we are continuously monitoring.
 
+> **&#9755;** Dart 3 contains three major advancements. Read the document ["Announcing Dart 3"](https://medium.com/dartlang/announcing-dart-3-53f065a10635) for more details.
+
 ## <span id="proj_deps">Project dependencies</span>
 
 This project depends on the following external software for the **Microsoft Windows** platform:
@@ -24,10 +26,10 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [`/opt/`][unix_opt] directory on Unix).
 
-For instance our development environment looks as follows (*July 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*August 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-3.0.6\   <i>(542 MB)</i>
+C:\opt\dart-sdk-3.0.7\   <i>(542 MB)</i>
 C:\opt\Git-2.41.0\       <i>(358 MB)</i>
 </pre>
 
@@ -38,7 +40,7 @@ C:\opt\Git-2.41.0\       <i>(358 MB)</i>
 This project is organized as follows:
 
 <pre style="font-size:80%;">
-dartbyexample\{<a href="dartbyexample/README.md">README.md</a>}, <a href="dartbyexample/exceptions/">exceptions</a>, ..}
+dartbyexample\{<a href="dartbyexample/README.md">README.md</a>, <a href="dartbyexample/exceptions/">exceptions</a>, ..}
 docs\
 examples\{<a href="examples/README.md">README.md</a>, <a href="examples/hello-dart/">hello-dart</a>, ..}
 README.md
@@ -124,7 +126,7 @@ Concretely, <code><b>setenv.bat</b></code> in our GitHub projects which depend o
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
