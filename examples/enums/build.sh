@@ -118,11 +118,11 @@ lint() {
     $DEBUG && dart_opts="--verbose $dart_opts"
 
     if $DEBUG; then
-        debug "$DART_CMD analyze \"$(mixed_path $SOURCE_DIR)/main/dart/\" $dart_opts"
+        debug "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart/\" $dart_opts"
     elif $VERBOSE; then
         echo "Analyze Dart source files in directory \"${mixed_path $SOURCE_DIR}\"" 1>&2
     fi
-    eval "$DART_CMD analyze \"$(mixed_path $SOURCE_DIR)/main/dart\" $dart_opts"
+    eval "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart\" $dart_opts"
     if [[ $? -ne 0 ]]; then
         error "Failed to analyze Dart source files in directory \"${SOURCE_DIR/$ROOT_DIR\//}"
         cleanup 1
@@ -287,11 +287,11 @@ cygwin=false
 mingw=false
 msys=false
 darwin=false
-case "`uname -s`" in
-  CYGWIN*) cygwin=true ;;
-  MINGW*)  mingw=true ;;
-  MSYS*)   msys=true ;;
-  Darwin*) darwin=true
+case "$(uname -s)" in
+    CYGWIN*) cygwin=true ;;
+    MINGW*)  mingw=true ;;
+    MSYS*)   msys=true ;;
+    Darwin*) darwin=true
 esac
 unset CYGPATH_CMD
 PSEP=":"
@@ -316,7 +316,7 @@ PROJECT_NAME="$(basename $ROOT_DIR)"
 PROJECT_URL="github.com/$USER/dart-examples"
 PROJECT_VERSION="1.0-SNAPSHOT"
 
-APP_NAME="hello-dart"
+APP_NAME="enums"
 APP_VERSION="0.1.0"
 
 TARGET_FILE="$TARGET_DIR/$APP_NAME-$APP_VERSION.exe"

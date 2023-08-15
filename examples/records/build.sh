@@ -287,11 +287,11 @@ cygwin=false
 mingw=false
 msys=false
 darwin=false
-case "`uname -s`" in
-  CYGWIN*) cygwin=true ;;
-  MINGW*)  mingw=true ;;
-  MSYS*)   msys=true ;;
-  Darwin*) darwin=true
+case "$(uname -s)" in
+    CYGWIN*) cygwin=true ;;
+    MINGW*)  mingw=true ;;
+    MSYS*)   msys=true ;;
+    Darwin*) darwin=true
 esac
 unset CYGPATH_CMD
 PSEP=":"
@@ -316,7 +316,7 @@ PROJECT_NAME="$(basename $ROOT_DIR)"
 PROJECT_URL="github.com/$USER/dart-examples"
 PROJECT_VERSION="1.0-SNAPSHOT"
 
-APP_NAME="hello-dart"
+APP_NAME="records"
 APP_VERSION="0.1.0"
 
 TARGET_FILE="$TARGET_DIR/$APP_NAME-$APP_VERSION.exe"

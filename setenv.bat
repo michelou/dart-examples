@@ -144,13 +144,13 @@ goto :eof
 set "__GIVEN_PATH=%~1"
 
 @rem https://serverfault.com/questions/62578/how-to-get-a-list-of-drive-letters-on-a-system-through-a-windows-shell-bat-cmd
-set __LETTERS=F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:
+set __DRIVE_NAMES=F:G:H:I:J:K:L:M:N:O:P:Q:R:S:T:U:V:W:X:Y:Z:
 for /f %%i in ('wmic logicaldisk get deviceid ^| findstr :') do (
-    set "__LETTERS=!__LETTERS:%%i=!"
+    set "__DRIVE_NAMES=!__DRIVE_NAMES:%%i=!"
 )
-if %_DEBUG%==1 echo %_DEBUG_LABEL% __LETTERS=%__LETTERS% ^(WMIC^) 1>&2
-if not defined __LETTERS (
-    echo %_ERROR_LABEL% No more free drive letter 1>&2
+if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(WMIC^) 1>&2
+if not defined __DRIVE_NAMES (
+    echo %_ERROR_LABEL% No more free drive name 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -172,13 +172,13 @@ for /f "tokens=1,2,*" %%f in ('subst') do (
         goto :eof
     )
 )
-for /f "tokens=1,2,*" %%f in ('subst') do (
+for /f "tokens=1,2,*" %%i in ('subst') do (
     set __USED=%%i
-    call :drive_name_update_letters "!__USED:~0,2!"
+    call :drive_names "!__USED:~0,2!"
 )
-if %_DEBUG%==1 echo %_DEBUG_LABEL% __LETTERS=%__LETTERS% ^(SUBST^) 1>&2
+if %_DEBUG%==1 echo %_DEBUG_LABEL% __DRIVE_NAMES=%__DRIVE_NAMES% ^(SUBST^) 1>&2
 
-set "_DRIVE_NAME=!__LETTERS:~0,2!"
+set "_DRIVE_NAME=!__DRIVE_NAMES:~0,2!"
 if /i "%_DRIVE_NAME%"=="%__GIVEN_PATH:~0,2%" goto :eof
 
 if %_DEBUG%==1 ( echo %_DEBUG_LABEL% subst "%_DRIVE_NAME%" "%__GIVEN_PATH%" 1>&2
@@ -192,9 +192,11 @@ if not %ERRORLEVEL%==0 (
 )
 goto :eof
 
-:drive_name_update_letters
-set "__USED=%~1"
-set "__LETTERS=!__LETTERS:%__USED%=!"
+@rem input parameter: %1=Used drive name
+@rem output parameter: __DRIVE_NAMES
+:drive_names
+set "__USED_NAME=%~1"
+set "__DRIVE_NAMES=!__DRIVE_NAMES:%__USED_NAME%=!"
 goto :eof
 
 :help

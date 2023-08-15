@@ -56,7 +56,7 @@ where
 - file [**`RESOURCES.md`**](RESOURCES.md) is the [Markdown][github_markdown] document presenting external resources.
 - file [**`setenv.bat`**](setenv.bat) is the batch command for setting up our environment.
 
-We also define a virtual drive **`T:`** in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
+We also define a virtual drive &ndash; e.g. drive **`T:`** &ndash; in our working environment in order to reduce/hide the real path of our project directory (see article ["Windows command prompt limitation"][windows_limitation] from Microsoft Support).
 > **:mag_right:** We use the Windows external command [**`subst`**][windows_subst] to create virtual drives; for instance:
 >
 > <pre style="font-size:80%;">
@@ -77,7 +77,7 @@ Command [**`setenv.bat`**](setenv.bat) is executed once to setup our development
    &nbsp;
      Options:
        -bash       start Git bash shell instead of Windows command prompt
-       -debug      show commands executed by this script
+       -debug      display commands executed by this script
        -verbose    display environment settings
    &nbsp;
      Subcommands:

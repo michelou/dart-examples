@@ -12,7 +12,7 @@
 
 - [Creating streams in Dart][article_nielsen] by Lasse Nielsen, April 2013.
 
-## <span id="blogs">Blogs</span>
+## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
 - [Christian's Blog](https://www.christianfindlay.com/blog/) :
   - [Dart 3: A Comprehensive Guide to Records and Futures](https://www.christianfindlay.com/blog/dart-records-and-futures), May 2023.
@@ -64,6 +64,7 @@
 
 - [`dart_eval`](https://pub.dev/packages/dart_eval) &ndash; an extensible bytecode compiler and interpreter for [Dart][dart_home].
 - [`dart2java`](https://m-sp.org/) by Matthias Spring, 2017.
+- [GitHub &ndash; Design Patterns in Dart](https://github.com/scottt2/design-patterns-in-dart) &ndash; Gang of Four (GOF) design patterns implemented in Dart.
 - [GitHub &ndash; Clean Code in Dart](https://github.com/williambarreiro/clean-code-dart) by William Barreiro.
 - [GitHub &ndash; Waleed Arshad](https://github.com/wal33d006)
 - [pub.dev](https://pub.dev/packages?q=sdk%3Adart) &ndash; the official package repository for [Dart][dart_home] and [Flutter][flutter_home] apps.
