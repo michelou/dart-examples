@@ -29,7 +29,7 @@ This project depends on the following external software for the **Microsoft Wind
 For instance our development environment looks as follows (*August 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-3.0.7\   <i>(542 MB)</i>
+C:\opt\dart-sdk-3.1.0\   <i>(542 MB)</i>
 C:\opt\Git-2.41.0\       <i>(358 MB)</i>
 </pre>
 

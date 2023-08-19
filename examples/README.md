@@ -32,7 +32,7 @@ In the same way command [make] executes the build commands `clean` and `run` def
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
 "C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
 [ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.0.7/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
+"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
 Info: Compiling with sound null safety.
 Generated: r:\examples\enums\target\hello-dart.exe
 target/hello-dart.exe
@@ -74,10 +74,10 @@ Executing command [`build.bat`](./hello-dart/build.bat) with option `-debug` ins
 <b>&gt; <a href="./hello-dart/build.bat">build</a> -debug clean run</b>
 [build] Options    : _TARGET= _TIMER=0 _VERBOSE=0
 [build] Subcommands: _CLEAN=1 _COMPILE=1 _RUN=1
-[build] Variables  : "DART_HOME=C:\opt\dart-sdk-3.0.7"
+[build] Variables  : "DART_HOME=C:\opt\dart-sdk-3.1.0"
 [build] Variables  : "GIT_HOME=C:\opt\Git-2.41.0"
 [build] rmdir /s /q "T:\examples\hello-dart\target"
-[build] "C:\opt\dart-sdk-3.0.7\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
+[build] "C:\opt\dart-sdk-3.1.0\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
 Compiling T:\examples\hello-dart\src\main\dart\main.dart to T:\examples\hello-dart\target\hello-dart.exe using format exe:
 Generating AOT kernel dill.
 Info: Compiling with sound null safety
@@ -95,7 +95,7 @@ In the same way command [make] executes the build commands `clean` and `run` def
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
 "C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
 [ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.0.7/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
+"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
 Info: Compiling with sound null safety.
 Generated: r:\examples\hello-dart\target\hello-dart.exe
 target/hello-dart.exe
@@ -135,7 +135,7 @@ In the same way command [make] executes the build commands `clean` and `run` def
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
 "C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
 [ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.0.7/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/records.exe"
+"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/records.exe"
 Info: Compiling with sound null safety.
 Generated: f:\examples\records\target\records.exe
 target/records.exe
