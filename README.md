@@ -33,8 +33,9 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (*September 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk-3.1.1\   <i>(542 MB)</i>
-C:\opt\Git\              <i>(367 MB)</i>
+C:\opt\dart-sdk\    <i>(535 MB)</i>
+C:\opt\Git\         <i>(367 MB)</i>
+C:\opt\VSCode\      <i>(341 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -76,23 +77,32 @@ In the next section we give a brief description of the batch files present in th
 We execute command [**`setenv.bat`**](setenv.bat) once to setup our development environment; it makes external tools such as [**`git.exe`**][git_cli] and [**`sh.exe`**][sh_cli] directly available from the command prompt.
 
    <pre style="font-size:80%;">
-   <b>&gt; <a href="setenv.bat">setenv</a> help</b>
-   Usage: setenv { &lt;option&gt; | &lt;subcommand&gt; }
+   <b>&gt; <a href="./setenv.bat">setenv</a></b>
+   Tool versions:
+   dart 3.1.2, make 4.4.1,
+   git 2.42.0.windows.1, diff 3.10, bash 5.2.15(1)-release
    &nbsp;
-     Options:
-       -bash       start Git bash shell instead of Windows command prompt
-       -debug      display commands executed by this script
-       -verbose    display environment settings
-   &nbsp;
-     Subcommands:
-       help        display this help message
-   &nbsp;
-   <b>&gt; <a href="">where</a> git sh</b>
+   <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/where" rel="external">where</a> git sh</b>
    C:\opt\Git\bin\git.exe
    C:\opt\Git\mingw64\bin\git.exe
    C:\opt\Git\bin\sh.exe
    C:\opt\Git\usr\bin\sh.exe
    </pre>
+
+Command [**`setenv help`**](./setenv.bat) displays the help messsage :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./setenv.bat">setenv help</a></b>
+Usage: setenv { &lt;option> | &lt;subcommand> }
+&nbsp;
+  Options:
+    -bash       start Git bash shell instead of Windows command prompt
+    -debug      display commands executed by this script
+    -verbose    display progress messages
+&nbsp;
+  Subcommands:
+    help        display this help message
+</pre>
 
 ## <span id="footnotes">Footnotes</span> [**&#x25B4;**](#top)
 

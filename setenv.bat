@@ -238,22 +238,28 @@ set _DART_HOME=
 set __DART_CMD=
 for /f "delims=" %%f in ('where dart.exe 2^>NUL') do set "__DART_CMD=%%f"
 if defined __DART_CMD (
-    for %%i in ("%__DART_CMD%") do set "__DART_BIN_DIR=%%~dpi"
+    for /f "delims=" %%i in ("%__DART_CMD%") do set "__DART_BIN_DIR=%%~dpi"
     for %%f in ("!__DART_BIN_DIR!.") do set "_DART_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Dart executable found in PATH 1>&2
-    goto :eof
 ) else if defined DART_HOME (
     set "_DART_HOME=%DART_HOME%"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable DART_HOME 1>&2
 ) else (
-    set _PATH=C:\opt
-    for /f %%f in ('dir /ad /b "!_PATH!\dart-sdk*" 2^>NUL') do set "_DART_HOME=!_PATH!\%%f"
+    set __PATH=C:\opt
+    if exist "!__PATH!\dart-sdk\" ( set "_DART_HOME=!__PATH!\dart-sdk"
+    ) else (
+        for %%f in ('dir /ad /b "!_PATH!\dart-sdk*" 2^>NUL') do set "_DART_HOME=!_PATH!\%%f"
+        if not defined _DART_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\dark-sdk*" 2^>NUL') do set "_DART_HOME=!__PATH!\%%f"
+        )
+    )
     if defined _DART_HOME (
-        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Dart installation directory !_DART_HOME! 1>&2
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Dart installation directory "!_DART_HOME!" 1>&2
     )
 )
 if not exist "%_DART_HOME%\bin\dart.exe" (
-    echo %_ERROR_LABEL% Dart executable not found ^(%_DART_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Dart executable not found ^("%_DART_HOME%"^) 1>&2
     set _DART_HOME=
     set _EXITCODE=1
     goto :eof
@@ -268,9 +274,9 @@ set _MSYS_PATH=
 set __MAKE_CMD=
 for /f "delims=" %%f in ('where make.exe 2^>NUL') do set "__MAKE_CMD=%%f"
 if defined __MAKE_CMD (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
     for /f "delims=" %%i in ("%__MAKE_CMD%") do set "__MAKE_BIN_DIR=%%~dpi"
-    for %%f in ("!__MAKE_BIN_DIR!.") do set "_MSYS_HOME=%%~dpf"
+    for /f "delims=" %%f in ("!__MAKE_BIN_DIR!.") do set "_MSYS_HOME=%%~dpf"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
     @rem keep _MSYS_PATH undefined since executable already in path
     goto :eof
 ) else if defined MSYS_HOME (
@@ -342,6 +348,7 @@ set _VSCODE_PATH=
 set __CODE_CMD=
 for /f "delims=" %%f in ('where code.exe 2^>NUL') do set "__CODE_CMD=%%f"
 if defined __CODE_CMD (
+    for /f "delims=" %%i in ("%__CODE_CMD%") do set "_VSCODE_HOME=%%~dpi"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VSCode executable found in PATH 1>&2
     @rem keep _VSCODE_PATH undefined since executable already in path
     goto :eof
@@ -387,7 +394,7 @@ if %ERRORLEVEL%==0 (
 )
 where /q "%GIT_HOME%\bin:git.exe"
 if %ERRORLEVEL%==0 (
-    for /f "usebackq tokens=1,2,*" %%i in (`"%GIT_HOME%\bin\git.exe" --version`) do set "__VERSIONS_LINE3=%__VERSIONS_LINE3% git %%k,"
+    for /f "usebackq tokens=1,2,*" %%i in (`"%GIT_HOME%\bin\git.exe" --version`) do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
@@ -430,7 +437,7 @@ endlocal & (
         if not defined DART_HOME set "DART_HOME=%_DART_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined MSYS_HOME set "MSYS_HOME=%_MSYS_HOME%"
-        if not defined VSCODE_HOME set "VSCODE_HOME=%VSCODE_HOME%"
+        if not defined VSCODE_HOME set "VSCODE_HOME=%_VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
         set "PATH=%_GIT_HOME%\bin;%PATH%%_MSYS_PATH%%_GIT_PATH%%_VSCODE_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
