@@ -165,7 +165,11 @@ Hello John! Your ticket is: 51
 
 ***
 
+<<<<<<< HEAD
 *[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
+=======
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
+>>>>>>> b989fd8bfa7f4ea7933e869f557079f71f05ceec
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
