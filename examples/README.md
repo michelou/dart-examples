@@ -30,9 +30,9 @@ In the same way command [make] executes the build commands `clean` and `run` def
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
-"C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
-[ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
+"C:/opt/Git/usr/bin/rm.exe" -rf "target"
+[ -d "target" ] || "C:/opt/Git/usr/bin/mkdir.exe" -p "target"
+"C:/opt/dart-sdk/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
 Info: Compiling with sound null safety.
 Generated: r:\examples\enums\target\hello-dart.exe
 target/hello-dart.exe
@@ -93,9 +93,9 @@ In the same way command [make] executes the build commands `clean` and `run` def
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
-"C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
-[ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
+"C:/opt/Git/usr/bin/rm.exe" -rf "target"
+[ -d "target" ] || "C:/opt/Git/usr/bin/mkdir.exe" -p "target"
+"C:/opt/dart-sdk/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/hello-dart.exe"
 Info: Compiling with sound null safety.
 Generated: r:\examples\hello-dart\target\hello-dart.exe
 target/hello-dart.exe
@@ -133,9 +133,9 @@ In the same way command [make] executes the build commands `clean` and `run` def
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
-"C:/opt/Git-2.41.0/usr/bin/rm.exe" -rf "target"
-[ -d "target" ] || "C:/opt/Git-2.41.0/usr/bin/mkdir.exe" -p "target"
-"C:/opt/dart-sdk-3.1.0/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/records.exe"
+"C:/opt/Git/usr/bin/rm.exe" -rf "target"
+[ -d "target" ] || "C:/opt/Git/usr/bin/mkdir.exe" -p "target"
+"C:/opt/dart-sdk/bin/dart.exe" compile exe src/main/dart/main.dart --output "target/records.exe"
 Info: Compiling with sound null safety.
 Generated: f:\examples\records\target\records.exe
 target/records.exe
@@ -165,7 +165,7 @@ Hello John! Your ticket is: 51
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

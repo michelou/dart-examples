@@ -26,7 +26,7 @@ This project depends on the following external software for the **Microsoft Wind
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [`/opt/`][unix_opt] directory on Unix).
 
-For instance our development environment looks as follows (*August 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*October 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\dart-sdk-3.1.0\   <i>(542 MB)</i>
@@ -50,8 +50,8 @@ README.md
 
 where
 
-(see file [**`docs\README.md`**](docs/README.md)).
-- directory [**`examples\`**](examples/) contains [Dart] examples grabbed from various websites (see file [**`examples\README.md`**](examples/README.md)).
+- directory [**`docs\`**](docs/) contains several [Dart] related papers/articles ([**`docs\README.md`**](docs/README.md)).
+- directory [**`examples\`**](examples/) contains [Dart] examples grabbed from various websites ([**`examples\README.md`**](examples/README.md)).
 - file [**`README.md`**](README.md) is the [Markdown][github_markdown] document for this page.
 - file [**`RESOURCES.md`**](RESOURCES.md) is the [Markdown][github_markdown] document presenting external resources.
 - file [**`setenv.bat`**](setenv.bat) is the batch command for setting up our environment.
@@ -77,11 +77,11 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    &nbsp;
      Options:
        -bash       start Git bash shell instead of Windows command prompt
-       -debug      display commands executed by this script
-       -verbose    display environment settings
+       -debug      print commands executed by this script
+       -verbose    print progress messages
    &nbsp;
      Subcommands:
-       help        display this help message
+       help        print this help message
    &nbsp;
    <b>&gt; <a href="">where</a> git sh</b>
    C:\opt\Git\bin\git.exe
@@ -126,7 +126,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
