@@ -63,7 +63,7 @@ args() {
         ## subcommands
         clean)     CLEAN=true ;;
         compile)   COMPILE=true ;;
-        doc)       COMPILE=true && DOC=true ;;
+        doc)       DOC=true ;;
         help)      HELP=true ;;
         lint)      LINT=true ;;
         run)       COMPILE=true && RUN=true ;;
@@ -77,7 +77,6 @@ args() {
     debug "Subcommands: CLEAN=$CLEAN COMPILE=$COMPILE HELP=$HELP LINT=$LINT RUN=$RUN"
     debug "Variables  : DART_HOME=$DART_HOME"
     debug "Variables  : GIT_HOME=$GIT_HOME"
-    debug "Variables  : MAVEN_HOME=$MAVEN_HOME"
     # See http://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
     $TIMER && TIMER_START=$(date +"%s")
 }
@@ -96,8 +95,8 @@ Usage: $BASENAME { <option> | <subcommand> }
     compile      compile Dart source files
     doc          generate HTML documentation
     help         display this help message
-    lint         analyze Dart source files with Lint
-    run          execute the generated program
+    lint         analyze Dart source files with dart analyze
+    run          execute the generated program "${TARGET_FILE/$ROOT_DIR\//}"
 EOS
 }
 
@@ -192,44 +191,22 @@ mixed_path() {
     fi
 }
 
+## See https://github.com/dart-lang/dartdoc#dartdoc_optionsyaml
 doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
-    local doc_timestamp_file="$TARGET_DOCS_DIR/.latest-build"
-
-    local is_required="$(action_required "$doc_timestamp_file" "$CLASSES_DIR/" "*.tasty")"
-    [[ $is_required -eq 0 ]] && return 1
-
-    local sources_file="$TARGET_DIR/scaladoc_sources.txt"
-    [[ -f "$sources_file" ]] && rm -rf "$sources_file"
-    # for f in $(find $SOURCE_DIR/main/java/ -name *.java 2>/dev/null); do
-    #     echo $(mixed_path $f) >> "$sources_file"
-    # done
-    for f in $(find "$CLASSES_DIR/" -name *.tasty 2>/dev/null); do
-        echo $(mixed_path $f) >> "$sources_file"
-    done
-    local opts_file="$TARGET_DIR/scaladoc_opts.txt"
-    if [[ $SCALA_VERSION -eq 2 ]]; then
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -doc-title "$PROJECT_NAME" -doc-footer "$PROJECT_URL" -doc-version "$PROJECT_VERSION" > "$opts_file"
-    else
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -project "$PROJECT_NAME" -project-version "$PROJECT_VERSION" > "$opts_file"
-    fi
+    local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
+    $DEBUG && set dartdoc_opts="--verbose $dart_opts"
     if $DEBUG; then
-        debug "$SCALADOC_CMD @$(mixed_path $opts_file) @$(mixed_path $sources_file)"
+        debug "$DART_CMD doc $dartdoc_opts \"$SOURCE_DIR/main/dart/\""
     elif $VERBOSE; then
-        echo "Generate HTML documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
+        echo "Generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
-    eval "$SCALADOC_CMD" "@$(mixed_path $opts_file)" "@$(mixed_path $sources_file)"
+    eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_DIR/main/dart/\""
     if [[ $? -ne 0 ]]; then
-        error "Failed to generate HTML documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\""
+        error "Failed to generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\""
         cleanup 1
     fi
-    if $DEBUG; then
-        debug "HTML documentation saved into directory \"$TARGET_DOCS_DIR\""
-    elif $VERBOSE; then
-        echo "HTML documentation saved into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
-    fi
-    touch "$doc_timestamp_file"
 }
 
 run() {

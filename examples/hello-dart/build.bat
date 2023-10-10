@@ -34,6 +34,10 @@ if %_COMPILE%==1 (
     call :compile
     if not !_EXITCODE!==0 goto end
 )
+if %_DOC%==1 (
+    call :doc
+    if not !_EXITCODE!==0 goto end
+)
 if %_RUN%==1 (
     call :run
     if not !_EXITCODE!==0 goto end
@@ -54,6 +58,7 @@ set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
 set "_SOURCE_DIR=%_ROOT_DIR%\src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
+set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
 
 for %%i in ("%~dp0\.") do set "_MAIN_NAME=%%~ni"
 set "_EXE_FILE=%_TARGET_DIR%\%_MAIN_NAME%.exe"
@@ -117,6 +122,7 @@ goto :eof
 :args
 set _CLEAN=0
 set _COMPILE=0
+set _DOC=0
 set _HELP=0
 set _LINT=0
 set _RUN=0
@@ -145,6 +151,7 @@ if "%__ARG:~0,1%"=="-" (
     @rem subcommand
     if "%__ARG%"=="clean" ( set _CLEAN=1
     ) else if "%__ARG%"=="compile" ( set _COMPILE=1
+    ) else if "%__ARG%"=="doc" ( set _DOC=1
     ) else if "%__ARG%"=="help" ( set _HELP=1
     ) else if "%__ARG%"=="lint" ( set _LINT=1
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
@@ -163,7 +170,7 @@ if %_DEBUG%==1 set _STDOUT_REDIRECT=
 
 if %_DEBUG%==1 (
     echo %_DEBUG_LABEL% Options    : _TARGET=%_TARGET% _TIMER=%_TIMER% _VERBOSE=%_VERBOSE% 1>&2
-    echo %_DEBUG_LABEL% Subcommands: _CLEAN=%_CLEAN% _COMPILE=%_COMPILE% _LINT=%_LINT% _RUN=%_RUN% 1>&2
+    echo %_DEBUG_LABEL% Subcommands: _CLEAN=%_CLEAN% _COMPILE=%_COMPILE% _DOC=%_DOC% _LINT=%_LINT% _RUN=%_RUN% 1>&2
     echo %_DEBUG_LABEL% Variables  : "DART_HOME=%DART_HOME%" 1>&2
     echo %_DEBUG_LABEL% Variables  : "GIT_HOME=%GIT_HOME%" 1>&2
 )
@@ -191,9 +198,10 @@ echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%clean%__END%       delete generated files
 echo     %__BEG_O%compile%__END%     generate executable files
+echo     %__BEG_O%doc%__END%         generate HTML documentation
 echo     %__BEG_O%help%__END%        display this help message
-echo     %__BEG_O%lint%__END%        analyze Dart source files with Lint
-echo     %__BEG_O%run%__END%         execute the generated program
+echo     %__BEG_O%lint%__END%        analyze Dart source files with %__BEG_N%dart analyze%__END%
+echo     %__BEG_O%run%__END%         execute the generated program "!_EXE_FILE:%_ROOT_DIR%=!"
 goto :eof
 
 :clean
@@ -254,6 +262,23 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" compile exe %__SOURCE_FILES% 
 call "%_DART_CMD%" compile exe %__SOURCE_FILES% %__DART_OPTS% %_STDOUT_REDIRECT%
 if not errorlevel 0 (
     echo %_ERROR_LABEL% Failed to compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
+    set _EXITCODE=1
+    goto :eof
+)
+goto :eof
+
+:doc
+if not exist "%_TARGET_DOCS_DIR%" mkdir "%_TARGET_DOCS_DIR%"
+
+set __DARTDOC_OPTS=--output="%_TARGET_DOCS_DIR%"
+if %_DEBUG%==1 set __DARTDOC_OPTS=--verbose %__DARTDOC_OPTS%
+
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURCE_DIR%\main\dart"
+) else if %_VERBOSE%==1 echo Generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
+)
+call "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURCE_DIR%\main\dart"
+if not errorlevel 0 (
+    echo %_ERROR_LABEL% Failed to generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
