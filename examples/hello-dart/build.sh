@@ -57,7 +57,7 @@ args() {
         -timer)    TIMER=true ;;
         -verbose)  VERBOSE=true ;;
         -*)
-            error "Unknown option $arg"
+            error "Unknown option \"$arg\""
             EXITCODE=1 && return 0
             ;;
         ## subcommands
@@ -68,7 +68,7 @@ args() {
         lint)      LINT=true ;;
         run)       COMPILE=true && RUN=true ;;
         *)
-            error "Unknown subcommand $arg"
+            error "Unknown subcommand \"$arg\""
             EXITCODE=1 && return 0
             ;;
         esac
@@ -86,17 +86,17 @@ help() {
 Usage: $BASENAME { <option> | <subcommand> }
 
   Options:
-    -debug       display commands executed by this script
-    -timer       display total execution time
-    -verbose     display progress messages
+    -debug       print commands executed by this script
+    -timer       print total execution time
+    -verbose     print progress messages
 
   Subcommands:
     clean        delete generated files
     compile      compile Dart source files
     doc          generate HTML documentation
-    help         display this help message
-    lint         analyze Dart source files with dart analyze
-    run          execute the generated program "${TARGET_FILE/$ROOT_DIR\//}"
+    help         print this help message
+    lint         analyze Dart source files with Lint
+    run          execute the generated program
 EOS
 }
 
@@ -194,8 +194,28 @@ mixed_path() {
 doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
+    local doc_timestamp_file="$TARGET_DOCS_DIR/.latest-build"
+
+    local is_required="$(action_required "$doc_timestamp_file" "$CLASSES_DIR/" "*.tasty")"
+    [[ $is_required -eq 0 ]] && return 1
+
+    local sources_file="$TARGET_DIR/scaladoc_sources.txt"
+    [[ -f "$sources_file" ]] && rm -rf "$sources_file"
+    # for f in $(find $SOURCE_DIR/main/java/ -name *.java 2>/dev/null); do
+    #     echo $(mixed_path $f) >> "$sources_file"
+    # done
+    for f in $(find "$CLASSES_DIR/" -type f -name "*.tasty" 2>/dev/null); do
+        echo $(mixed_path $f) >> "$sources_file"
+    done
+    local opts_file="$TARGET_DIR/scaladoc_opts.txt"
+    if [[ $SCALA_VERSION -eq 2 ]]; then
+        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -doc-title "$PROJECT_NAME" -doc-footer "$PROJECT_URL" -doc-version "$PROJECT_VERSION" > "$opts_file"
+    else
+        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -project "$PROJECT_NAME" -project-version "$PROJECT_VERSION" > "$opts_file"
+    fi
     local dart_opts="--output=\"$TARGET_DOCS_DIR\""
     $DEBUG && set dart_opts="--verbose $dart_opts"
+
     if $DEBUG; then
         debug "$DART_CMD doc \"$SOURCE_DIR/main/dart/\" $dart_opts"
     elif $VERBOSE; then
@@ -263,11 +283,11 @@ cygwin=false
 mingw=false
 msys=false
 darwin=false
-case "`uname -s`" in
-  CYGWIN*) cygwin=true ;;
-  MINGW*)  mingw=true ;;
-  MSYS*)   msys=true ;;
-  Darwin*) darwin=true
+case "$(uname -s)" in
+    CYGWIN*) cygwin=true ;;
+    MINGW*)  mingw=true ;;
+    MSYS*)   msys=true ;;
+    Darwin*) darwin=true
 esac
 unset CYGPATH_CMD
 PSEP=":"

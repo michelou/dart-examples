@@ -25,6 +25,7 @@ if %_HELP%==1 (
 
 set _GIT_PATH=
 set _MSYS_PATH=
+set _VSCODE_PATH=
 
 call :dart
 if not %_EXITCODE%==0 goto end
@@ -35,6 +36,11 @@ if not %_EXITCODE%==0 goto end
 call :git
 if not %_EXITCODE%==0 goto end
 
+call :vscode
+if not %_EXITCODE%==0 (
+    @rem optional
+    set _EXITCODE=0
+)
 goto end
 
 @rem #########################################################################
@@ -103,7 +109,6 @@ goto :eof
 set _BASH=0
 set _HELP=0
 set _VERBOSE=0
-set __N=0
 :args_loop
 set "__ARG=%~1"
 if not defined __ARG goto args_done
@@ -112,9 +117,10 @@ if "%__ARG:~0,1%"=="-" (
     @rem option
     if "%__ARG%"=="-bash" ( set _BASH=1
     ) else if "%__ARG%"=="-debug" ( set _DEBUG=1
+    ) else if "%__ARG%"=="-help" ( set _HELP=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
-        echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown option "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -122,11 +128,10 @@ if "%__ARG:~0,1%"=="-" (
     @rem subcommand
     if "%__ARG%"=="help" ( set _HELP=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
-    set /a __N+=1
 )
 shift
 goto args_loop
@@ -219,11 +224,11 @@ echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
 echo     %__BEG_O%-bash%__END%       start Git bash shell instead of Windows command prompt
-echo     %__BEG_O%-debug%__END%      display commands executed by this script
-echo     %__BEG_O%-verbose%__END%    display environment settings
+echo     %__BEG_O%-debug%__END%      print commands executed by this script
+echo     %__BEG_O%-verbose%__END%    print progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
-echo     %__BEG_O%help%__END%        display this help message
+echo     %__BEG_O%help%__END%        print this help message
 goto :eof
 
 @rem output parameter: _DART_HOME
@@ -233,22 +238,28 @@ set _DART_HOME=
 set __DART_CMD=
 for /f "delims=" %%f in ('where dart.exe 2^>NUL') do set "__DART_CMD=%%f"
 if defined __DART_CMD (
-    for %%i in ("%__DART_CMD%") do set "__DART_BIN_DIR=%%~dpi"
-    for %%f in ("!__DART_BIN_DIR!.") do set "_DART_HOME=%%~dpf"
+    for /f "delims=" %%i in ("%__DART_CMD%") do set "__DART_BIN_DIR=%%~dpi"
+    for /f "delims=" %%f in ("!__DART_BIN_DIR!.") do set "_DART_HOME=%%~dpf"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of Dart executable found in PATH 1>&2
-    goto :eof
 ) else if defined DART_HOME (
     set "_DART_HOME=%DART_HOME%"
     if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable DART_HOME 1>&2
 ) else (
-    set _PATH=C:\opt
-    for /f %%f in ('dir /ad /b "!_PATH!\dart-sdk*" 2^>NUL') do set "_DART_HOME=!_PATH!\%%f"
+    set __PATH=C:\opt
+    if exist "!__PATH!\dart-sdk\" ( set "_DART_HOME=!__PATH!\dart-sdk"
+    ) else (
+        for %%f in ('dir /ad /b "!__PATH!\dart-sdk*"') do set "_DART_HOME=!__PATH!\%%f"
+        if not defined _DART_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\dark-sdk*" 2^>NUL') do set "_DART_HOME=!__PATH!\%%f"
+        )
+    )
     if defined _DART_HOME (
-        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Dart installation directory !_DART_HOME! 1>&2
+        if %_DEBUG%==1 echo %_DEBUG_LABEL% Using default Dart installation directory "!_DART_HOME!" 1>&2
     )
 )
 if not exist "%_DART_HOME%\bin\dart.exe" (
-    echo %_ERROR_LABEL% Dart executable not found ^(%_DART_HOME%^) 1>&2
+    echo %_ERROR_LABEL% Dart executable not found ^("%_DART_HOME%"^) 1>&2
     set _DART_HOME=
     set _EXITCODE=1
     goto :eof
@@ -263,9 +274,9 @@ set _MSYS_PATH=
 set __MAKE_CMD=
 for /f "delims=" %%f in ('where make.exe 2^>NUL') do set "__MAKE_CMD=%%f"
 if defined __MAKE_CMD (
-    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
     for /f "delims=" %%i in ("%__MAKE_CMD%") do set "__MAKE_BIN_DIR=%%~dpi"
-    for %%f in ("!__MAKE_BIN_DIR!") do set "_MSYS_HOME=%%~dpf"
+    for /f "delims=" %%f in ("!__MAKE_BIN_DIR!") do set "_MSYS_HOME=%%~dpf"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of GNU Make executable found in PATH 1>&2
     @rem keep _MSYS_PATH undefined since executable already in path
     goto :eof
 ) else if defined MSYS_HOME (
@@ -280,7 +291,7 @@ if defined __MAKE_CMD (
     )
 )
 if not exist "%_MSYS_HOME%\usr\bin\make.exe" (
-    echo %_ERROR_LABEL% GNU Make executable not found ^(%_MSYS_HOME%^) 1>&2
+    echo %_ERROR_LABEL% GNU Make executable not found ^("%_MSYS_HOME%"^) 1>&2
     set _MSYS_HOME=
     set _EXITCODE=1
     goto :eof
@@ -298,7 +309,7 @@ set __GIT_CMD=
 for /f "delims=" %%f in ('where git.exe 2^>NUL') do set "__GIT_CMD=%%f"
 if defined __GIT_CMD (
     for /f "delims=" %%i in ("%__GIT_CMD%") do set "__GIT_BIN_DIR=%%~dpi"
-    for %%f in ("!__GIT_BIN_DIR!\.") do set "_GIT_HOME=%%~dpf"
+    for /f "delims=" %%f in ("!__GIT_BIN_DIR!\.") do set "_GIT_HOME=%%~dpf"
     @rem Executable git.exe is present both in bin\ and \mingw64\bin\
     if not "!_GIT_HOME:mingw=!"=="!_GIT_HOME!" (
         for %%f in ("!_GIT_HOME!\.") do set "_GIT_HOME=%%~dpf"
@@ -329,6 +340,43 @@ if not exist "%_GIT_HOME%\bin\git.exe" (
 set "_GIT_PATH=;%_GIT_HOME%\bin;%_GIT_HOME%\mingw64\bin;%_GIT_HOME%\usr\bin"
 goto :eof
 
+@rem output parameters: _VSCODE_HOME, _VSCODE_PATH
+:vscode
+set _VSCODE_HOME=
+set _VSCODE_PATH=
+
+set __CODE_CMD=
+for /f "delims=" %%f in ('where code.exe 2^>NUL') do set "__CODE_CMD=%%f"
+if defined __CODE_CMD (
+    for /f "delims=" %%i in ("%__CODE_CMD%") do set "_VSCODE_HOME=%%~dpi"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using path of VSCode executable found in PATH 1>&2
+    @rem keep _VSCODE_PATH undefined since executable already in path
+    goto :eof
+) else if defined VSCODE_HOME (
+    set "_VSCODE_HOME=%VSCODE_HOME%"
+    if %_DEBUG%==1 echo %_DEBUG_LABEL% Using environment variable VSCODE_HOME 1>&2
+) else (
+    set __PATH=C:\opt
+    if exist "!__PATH!\VSCode\" ( set "_VSCODE_HOME=!__PATH!\VSCode"
+    ) else (
+        for /f %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        if not defined _VSCODE_HOME (
+            set "__PATH=%ProgramFiles%"
+            for /f "delims=" %%f in ('dir /ad /b "!__PATH!\VSCode-1*" 2^>NUL') do set "_VSCODE_HOME=!__PATH!\%%f"
+        )
+    )
+)
+if not exist "%_VSCODE_HOME%\code.exe" (
+    echo %_WARNING_LABEL% VSCode executable not found ^("%_VSCODE_HOME%"^) 1>&2
+    if exist "%_VSCODE_HOME%\Code - Insiders.exe" (
+        echo %_WARNING_LABEL% It looks like you've installed an Insider version of VSCode 1>&2
+    )
+    set _EXITCODE=1
+    goto :eof
+)
+set "_VSCODE_PATH=;%_VSCODE_HOME%"
+goto :eof
+
 :print_env
 set __VERBOSE=%1
 set "__VERSIONS_LINE1=  "
@@ -346,7 +394,7 @@ if %ERRORLEVEL%==0 (
 )
 where /q "%GIT_HOME%\bin:git.exe"
 if %ERRORLEVEL%==0 (
-    for /f "usebackq tokens=1,2,*" %%i in (`"%GIT_HOME%\bin\git.exe" --version`) do set "__VERSIONS_LINE3=%__VERSIONS_LINE3% git %%k,"
+    for /f "usebackq tokens=1,2,*" %%i in (`"%GIT_HOME%\bin\git.exe" --version`) do set "__VERSIONS_LINE2=%__VERSIONS_LINE2% git %%k,"
     set __WHERE_ARGS=%__WHERE_ARGS% "%GIT_HOME%\bin:git.exe"
 )
 where /q "%GIT_HOME%\usr\bin:diff.exe"
@@ -370,8 +418,13 @@ if %__VERBOSE%==1 if defined __WHERE_ARGS (
     if defined DART_HOME echo    "DART_HOME=%DART_HOME%" 1>&2
     if defined GIT_HOME echo    "GIT_HOME=%GIT_HOME%" 1>&2
     if defined MSYS_HOME echo    "MSYS_HOME=%MSYS_HOME%" 1>&2
+    if defined VSCODE_HOME echo    "VSCODE_HOME=%VSCODE_HOME%" 1>&2
     echo Path associations: 1>&2
-    for /f "delims=" %%i in ('subst') do echo    %%i 1>&2
+    for /f "delims=" %%i in ('subst') do (
+        set "__LINE=%%i"
+        setlocal enabledelayedexpansion
+        echo    !__LINE:%USERPROFILE%=%%USERPROFILE%%! 1>&2
+    )
 )
 goto :eof
 
@@ -384,8 +437,9 @@ endlocal & (
         if not defined DART_HOME set "DART_HOME=%_DART_HOME%"
         if not defined GIT_HOME set "GIT_HOME=%_GIT_HOME%"
         if not defined MSYS_HOME set "MSYS_HOME=%_MSYS_HOME%"
+        if not defined VSCODE_HOME set "VSCODE_HOME=%_VSCODE_HOME%"
         @rem We prepend %_GIT_HOME%\bin to hide C:\Windows\System32\bash.exe
-        set "PATH=%_GIT_HOME%\bin;%PATH%%_MSYS_PATH%%_GIT_PATH%;%~dp0bin"
+        set "PATH=%_GIT_HOME%\bin;%PATH%%_MSYS_PATH%%_GIT_PATH%%_VSCODE_PATH%;%~dp0bin"
         call :print_env %_VERBOSE%
         if not "%CD:~0,2%"=="%_DRIVE_NAME%" (
             if %_DEBUG%==1 echo %_DEBUG_LABEL% cd /d %_DRIVE_NAME% 1>&2
