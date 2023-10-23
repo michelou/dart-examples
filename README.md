@@ -33,7 +33,7 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (*October 2023*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
-C:\opt\dart-sdk\    <i>(535 MB)</i>
+C:\opt\dart-sdk\    <i>(534 MB)</i>
 C:\opt\Git\         <i>(367 MB)</i>
 C:\opt\VSCode\      <i>(341 MB)</i>
 </pre>
@@ -79,7 +79,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-   dart 3.1.2, make 4.4.1,
+   dart 3.1.4, make 4.4.1,
    git 2.42.0.windows.1, diff 3.10, bash 5.2.15(1)-release
    &nbsp;
      Options:
@@ -192,6 +192,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
 [unix_opt]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html
 [vscode_downloads]: https://code.visualstudio.com/#alt-downloads
+[vscode_relnotes]: https://code.visualstudio.com/updates/
 [windows_batch_file]: https://en.wikibooks.org/wiki/Windows_Batch_Scripting
 [windows_installer]: https://docs.microsoft.com/en-us/windows/win32/msi/windows-installer-portal
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation

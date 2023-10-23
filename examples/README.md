@@ -74,10 +74,10 @@ Executing command [`build.bat`](./hello-dart/build.bat) with option `-debug` ins
 <b>&gt; <a href="./hello-dart/build.bat">build</a> -debug clean run</b>
 [build] Options    : _TARGET= _TIMER=0 _VERBOSE=0
 [build] Subcommands: _CLEAN=1 _COMPILE=1 _RUN=1
-[build] Variables  : "DART_HOME=C:\opt\dart-sdk-3.1.0"
-[build] Variables  : "GIT_HOME=C:\opt\Git-2.41.0"
+[build] Variables  : "DART_HOME=C:\opt\dart-sdk"
+[build] Variables  : "GIT_HOME=C:\opt\Git"
 [build] rmdir /s /q "T:\examples\hello-dart\target"
-[build] "C:\opt\dart-sdk-3.1.0\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
+[build] "C:\opt\dart-sdk\bin\dart.exe" compile exe  "T:\examples\hello-dart\src\main\dart\main.dart" --verbose --output "T:\examples\hello-dart\target\hello-dart.exe"
 Compiling T:\examples\hello-dart\src\main\dart\main.dart to T:\examples\hello-dart\target\hello-dart.exe using format exe:
 Generating AOT kernel dill.
 Info: Compiling with sound null safety
@@ -165,11 +165,7 @@ Hello John! Your ticket is: 51
 
 ***
 
-<<<<<<< HEAD
 *[mics](https://lampwww.epfl.ch/~michelou/)/October 2023* [**&#9650;**](#top)
-=======
-*[mics](https://lampwww.epfl.ch/~michelou/)/September 2023* [**&#9650;**](#top)
->>>>>>> b989fd8bfa7f4ea7933e869f557079f71f05ceec
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
