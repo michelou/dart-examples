@@ -56,7 +56,7 @@ set _DEBUG_LABEL=%_NORMAL_BG_CYAN%[%_BASENAME%]%_RESET%
 set _ERROR_LABEL=%_STRONG_FG_RED%Error%_RESET%:
 set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
-set "_SOURCE_DIR=%_ROOT_DIR%\src"
+set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
 
@@ -64,7 +64,7 @@ for %%i in ("%~dp0\.") do set "_MAIN_NAME=%%~ni"
 set "_EXE_FILE=%_TARGET_DIR%\%_MAIN_NAME%.exe"
 
 if not exist "%DART_HOME%\bin\dart.exe" (
-    echo %_ERROR_LABEL% Dart 3 installation not found 1>&2
+    echo %_ERROR_LABEL% Dart 3 installation directory not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
@@ -143,7 +143,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="-timer" ( set _TIMER=1
     ) else if "%__ARG%"=="-verbose" ( set _VERBOSE=1
     ) else (
-        echo %_ERROR_LABEL% Unknown option %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown option "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
    )
@@ -156,7 +156,7 @@ if "%__ARG:~0,1%"=="-" (
     ) else if "%__ARG%"=="lint" ( set _LINT=1
     ) else if "%__ARG%"=="run" ( set _COMPILE=1& set _RUN=1
     ) else (
-        echo %_ERROR_LABEL% Unknown subcommand %__ARG% 1>&2
+        echo %_ERROR_LABEL% Unknown subcommand "%__ARG%" 1>&2
         set _EXITCODE=1
         goto args_done
     )
@@ -192,16 +192,16 @@ if %_VERBOSE%==1 (
 echo Usage: %__BEG_O%%_BASENAME% { ^<option^> ^| ^<subcommand^> }%__END%
 echo.
 echo   %__BEG_P%Options:%__END%
-echo     %__BEG_O%-debug%__END%      display commands executed by this script
-echo     %__BEG_O%-verbose%__END%    display progress messages
+echo     %__BEG_O%-debug%__END%      print commands executed by this script
+echo     %__BEG_O%-verbose%__END%    print progress messages
 echo.
 echo   %__BEG_P%Subcommands:%__END%
 echo     %__BEG_O%clean%__END%       delete generated files
 echo     %__BEG_O%compile%__END%     generate executable files
 echo     %__BEG_O%doc%__END%         generate HTML documentation
-echo     %__BEG_O%help%__END%        display this help message
-echo     %__BEG_O%lint%__END%        analyze Dart source files with Lint
-echo     %__BEG_O%run%__END%         execute the generated program
+echo     %__BEG_O%help%__END%        print this help message
+echo     %__BEG_O%lint%__END%        analyze Dart source files with %__BEG_N%dart analyze%__END%
+echo     %__BEG_O%run%__END%         execute the generated program "!_EXE_FILE:%_ROOT_DIR%=!"
 goto :eof
 
 :clean
@@ -216,7 +216,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% rmdir /s /q "%__DIR%" 1>&2
 ) else if %_VERBOSE%==1 ( echo Delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
 )
 rmdir /s /q "%__DIR%"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -231,7 +231,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\d
 ) else if %_VERBOSE%==1 echo Analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
 )
 call "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\dart" %__DART_OPTS% %_STDOUT_REDIRECT%
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -260,7 +260,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" compile exe %__SOURCE_FILES% 
 ) else if %_VERBOSE%==1 echo Compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_DART_CMD%" compile exe %__SOURCE_FILES% %__DART_OPTS% %_STDOUT_REDIRECT%
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -277,7 +277,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURC
 ) else if %_VERBOSE%==1 echo Generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURCE_DIR%\main\dart"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -286,19 +286,22 @@ goto :eof
 
 :run
 if not exist "%_EXE_FILE%" (
-    echo %_DEBUG_LABEL% Main program "!_EXE_FILE:%_ROOT_DIR%=!" not found 1>&2
+    echo %_ERROR_LABEL% Main program "!_EXE_FILE:%_ROOT_DIR%=!" not found 1>&2
     set _EXITCODE=1
     goto :eof
 )
-if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
+if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_EXE_FILE%" 1>&2
 ) else if %_VERBOSE%==1 ( echo Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
 )
 call "%_EXE_FILE%"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_DEBUG_LABEL% Failed to execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
 )
+goto :eof
+
+:test
 goto :eof
 
 @rem output parameter: _DURATION
@@ -320,3 +323,4 @@ if %_TIMER%==1 (
 )
 if %_DEBUG%==1 echo %_DEBUG_LABEL% _EXITCODE=%_EXITCODE% 1>&2
 exit /b %_EXITCODE%
+endlocal

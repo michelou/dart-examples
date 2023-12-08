@@ -56,7 +56,7 @@ set _DEBUG_LABEL=%_NORMAL_BG_CYAN%[%_BASENAME%]%_RESET%
 set _ERROR_LABEL=%_STRONG_FG_RED%Error%_RESET%:
 set _WARNING_LABEL=%_STRONG_FG_YELLOW%Warning%_RESET%:
 
-set "_SOURCE_DIR=%_ROOT_DIR%\src"
+set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
 
@@ -216,7 +216,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% rmdir /s /q "%__DIR%" 1>&2
 ) else if %_VERBOSE%==1 ( echo Delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
 )
 rmdir /s /q "%__DIR%"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to delete directory "!__DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -231,7 +231,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\d
 ) else if %_VERBOSE%==1 echo Analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
 )
 call "%_DART_CMD%" analyze "%_SOURCE_DIR%\main\dart" %__DART_OPTS% %_STDOUT_REDIRECT%
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to analyze Dart source files in directory "!_SOURCE_DIR:%_ROOT_DIR%\=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -260,7 +260,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" compile exe %__SOURCE_FILES% 
 ) else if %_VERBOSE%==1 echo Compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_DART_CMD%" compile exe %__SOURCE_FILES% %__DART_OPTS% %_STDOUT_REDIRECT%
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to compile %__N_FILES% into directory "!_TARGET_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -277,7 +277,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURC
 ) else if %_VERBOSE%==1 echo Generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
 )
 call "%_DART_CMD%" doc %__DARTDOC_OPTS% "%_SOURCE_DIR%\main\dart"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_ERROR_LABEL% Failed to generate documentation into directory "!_TARGET_DOCS_DIR:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof
@@ -294,7 +294,7 @@ if %_DEBUG%==1 ( echo %_DEBUG_LABEL% Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 
 ) else if %_VERBOSE%==1 ( echo Execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
 )
 call "%_EXE_FILE%"
-if not errorlevel 0 (
+if not %ERRORLEVEL%==0 (
     echo %_DEBUG_LABEL% Failed to execute program "!_EXE_FILE:%_ROOT_DIR%=!" 1>&2
     set _EXITCODE=1
     goto :eof

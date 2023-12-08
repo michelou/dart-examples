@@ -63,7 +63,7 @@ args() {
         ## subcommands
         clean)     CLEAN=true ;;
         compile)   COMPILE=true ;;
-        doc)       COMPILE=true && DOC=true ;;
+        doc)       DOC=true ;;
         help)      HELP=true ;;
         lint)      LINT=true ;;
         run)       COMPILE=true && RUN=true ;;
@@ -74,7 +74,7 @@ args() {
         esac
     done
     debug "Options    : TIMER=$TIMER VERBOSE=$VERBOSE"
-    debug "Subcommands: CLEAN=$CLEAN COMPILE=$COMPILE HELP=$HELP LINT=$LINT RUN=$RUN"
+    debug "Subcommands: CLEAN=$CLEAN COMPILE=$COMPILE DOC=$DOC HELP=$HELP LINT=$LINT RUN=$RUN"
     debug "Variables  : DART_HOME=$DART_HOME"
     debug "Variables  : GIT_HOME=$GIT_HOME"
     # See http://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
@@ -95,8 +95,8 @@ Usage: $BASENAME { <option> | <subcommand> }
     compile      compile Dart source files
     doc          generate HTML documentation
     help         print this help message
-    lint         analyze Dart source files with Lint
-    run          execute the generated program
+    lint         analyze Dart source files with dart analyze
+    run          execute the generated program "${TARGET_FILE/$ROOT_DIR\//}"
 EOS
 }
 
@@ -117,11 +117,11 @@ lint() {
     $DEBUG && dart_opts="--verbose $dart_opts"
 
     if $DEBUG; then
-        debug "$DART_CMD analyze \"$(mixed_path $SOURCE_DIR)/main/dart/\" $dart_opts"
+        debug "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart/\" $dart_opts"
     elif $VERBOSE; then
         echo "Analyze Dart source files in directory \"${mixed_path $SOURCE_DIR}\"" 1>&2
     fi
-    eval "$DART_CMD analyze \"$(mixed_path $SOURCE_DIR)/main/dart\" $dart_opts"
+    eval "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart\" $dart_opts"
     if [[ $? -ne 0 ]]; then
         error "Failed to analyze Dart source files in directory \"${SOURCE_DIR/$ROOT_DIR\//}"
         cleanup 1
@@ -191,37 +191,18 @@ mixed_path() {
     fi
 }
 
+## See https://github.com/dart-lang/dartdoc#dartdoc_optionsyaml
 doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
-    local doc_timestamp_file="$TARGET_DOCS_DIR/.latest-build"
-
-    local is_required="$(action_required "$doc_timestamp_file" "$CLASSES_DIR/" "*.tasty")"
-    [[ $is_required -eq 0 ]] && return 1
-
-    local sources_file="$TARGET_DIR/scaladoc_sources.txt"
-    [[ -f "$sources_file" ]] && rm -rf "$sources_file"
-    # for f in $(find $SOURCE_DIR/main/java/ -name *.java 2>/dev/null); do
-    #     echo $(mixed_path $f) >> "$sources_file"
-    # done
-    for f in $(find "$CLASSES_DIR/" -type f -name "*.tasty" 2>/dev/null); do
-        echo $(mixed_path $f) >> "$sources_file"
-    done
-    local opts_file="$TARGET_DIR/scaladoc_opts.txt"
-    if [[ $SCALA_VERSION -eq 2 ]]; then
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -doc-title "$PROJECT_NAME" -doc-footer "$PROJECT_URL" -doc-version "$PROJECT_VERSION" > "$opts_file"
-    else
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -project "$PROJECT_NAME" -project-version "$PROJECT_VERSION" > "$opts_file"
-    fi
-    local dart_opts="--output=\"$TARGET_DOCS_DIR\""
-    $DEBUG && set dart_opts="--verbose $dart_opts"
-
+    local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
+    $DEBUG && set dartdoc_opts="--verbose $dartdoc_opts"
     if $DEBUG; then
-        debug "$DART_CMD doc \"$SOURCE_DIR/main/dart/\" $dart_opts"
+        debug "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     elif $VERBOSE; then
         echo "Generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
-    eval "\"$DART_CMD\" doc \"$SOURCE_DIR/main/dart/\" $dart_opts"
+    eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     if [[ $? -ne 0 ]]; then
         error "Failed to generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\""
         cleanup 1
@@ -259,7 +240,7 @@ EXITCODE=0
 ROOT_DIR="$(getHome)"
 
 SOURCE_DIR=$ROOT_DIR/src
-MAIN_SOURCE_DIR=$SOURCE_DIR/main/scala
+SOURCE_MAIN_DIR=$SOURCE_DIR/main/dart
 TARGET_DIR=$ROOT_DIR/target
 TARGET_DOCS_DIR=$TARGET_DIR/docs
 

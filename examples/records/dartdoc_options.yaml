@@ -1,0 +1,12 @@
+dartdoc:
+  ignore:
+    #- ambiguous-doc-reference
+    - no-documentable-libraries
+  errors:
+    - unresolved-doc-reference
+  warnings:
+    - tool-error
+
+# Examples:
+# https://github.com/chatwoot/chatwoot-flutter-sdk/blob/develop/dartdoc_options.yaml
+#

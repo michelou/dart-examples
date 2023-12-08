@@ -40,7 +40,7 @@ help:
 	@$(ECHO) "     all    alias for build"
 	@$(ECHO) "     build  compile Dart source files"
 	@$(ECHO) "     clean  delete generated files"
-	@$(ECHO) "     help   display this help message"
+	@$(ECHO) "     help   print this help message"
 	@$(ECHO) "     run    execute main program \"$(TARGET)\""
 
 ##############################################################################

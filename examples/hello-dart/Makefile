@@ -46,6 +46,13 @@ help:
 ##############################################################################
 ## doc rules
 
+TARGET_DOC_DIR = $(TARGET_DIR)/doc
+TARGET_DOC     = $(TARGET_DIR)/dart_doc.txt
+
+$(TARGET_DOC): $(SOURCES)
+	[ -d "$(TARGET_DOC_DIR)" ] || "$(MKDIR)" -p "$(TARGET_DOC_DIR)"
+	"$(DART)" doc --output "$(TARGET_DOC_DIR)" "$(SOURCE_DIR)/main/dart"
+	@(TOUCH) "$(TARGET_DOC)"
 
 ##############################################################################
 ## lint rules

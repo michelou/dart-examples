@@ -57,7 +57,7 @@ args() {
         -timer)    TIMER=true ;;
         -verbose)  VERBOSE=true ;;
         -*)
-            error "Unknown option $arg"
+            error "Unknown option \"$arg\""
             EXITCODE=1 && return 0
             ;;
         ## subcommands
@@ -68,13 +68,13 @@ args() {
         lint)      LINT=true ;;
         run)       COMPILE=true && RUN=true ;;
         *)
-            error "Unknown subcommand $arg"
+            error "Unknown subcommand \"$arg\""
             EXITCODE=1 && return 0
             ;;
         esac
     done
     debug "Options    : TIMER=$TIMER VERBOSE=$VERBOSE"
-    debug "Subcommands: CLEAN=$CLEAN COMPILE=$COMPILE HELP=$HELP LINT=$LINT RUN=$RUN"
+    debug "Subcommands: CLEAN=$CLEAN COMPILE=$COMPILE DOC=$DOC HELP=$HELP LINT=$LINT RUN=$RUN"
     debug "Variables  : DART_HOME=$DART_HOME"
     debug "Variables  : GIT_HOME=$GIT_HOME"
     # See http://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
@@ -196,13 +196,13 @@ doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
     local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
-    $DEBUG && set dartdoc_opts="--verbose $dart_opts"
+    $DEBUG && set dartdoc_opts="--verbose $dartdoc_opts"
     if $DEBUG; then
-        debug "$DART_CMD doc $dartdoc_opts \"$SOURCE_DIR/main/dart/\""
+        debug "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     elif $VERBOSE; then
         echo "Generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
-    eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_DIR/main/dart/\""
+    eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     if [[ $? -ne 0 ]]; then
         error "Failed to generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\""
         cleanup 1
@@ -240,7 +240,7 @@ EXITCODE=0
 ROOT_DIR="$(getHome)"
 
 SOURCE_DIR=$ROOT_DIR/src
-MAIN_SOURCE_DIR=$SOURCE_DIR/main/scala
+SOURCE_MAIN_DIR=$SOURCE_DIR/main/dart
 TARGET_DIR=$ROOT_DIR/target
 TARGET_DOCS_DIR=$TARGET_DIR/docs
 

@@ -1,6 +1,6 @@
 # Referene: https://dart.dev/effective-dart/documentation
 
-name: hello-dart
+name: records
 version: 1.0.0
 description: >-
   Hello world

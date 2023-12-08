@@ -13,7 +13,7 @@
 
 ## <span id="enums">`enums` Example</span>
 
-Command [`build.bat`](./enums/build.bat) generates the executable `enums.exe` from source file [`main.dart`](./enums/src/main/dart/main.dart) and execute it.
+Command [**`build.bat run`**](./enums/build.bat) generates the executable `enums.exe` from source file [`main.dart`](./enums/src/main/dart/main.dart) and runs it.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./enums/build.bat">build</a> -verbose run</b>
@@ -26,7 +26,7 @@ A car is a vehicle with 4 tires.
 80
 </pre>
 
-In the same way command [make] executes the build commands `clean` and `run` defined in project file [`Makefile`](./enums/Makefile) (use option `-q` to hide progress messages) :
+In the same way command [**`make.exe`**][make_cli] executes the build commands `clean` and `run` defined in project file [`Makefile`](./enums/Makefile) (use option `-q` to hide progress messages) :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
@@ -43,7 +43,7 @@ A car is a vehicle with 4 tires.
 80
 </pre>
 
-Finally, the bash script [`build.sh`](./enums/build.sh) works in the same way as batch file [`build.bat`](./enums/build.bat) :
+Finally, the bash script [**`build.sh`**](./enums/build.sh) works in the same way as batch file [**`build.bat`**](./enums/build.bat) :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/sh.1p.html" rel="external">sh</a> <a href="./enums/build.sh">build.sh</a> clean run</b>
@@ -58,7 +58,7 @@ A car is a vehicle with 4 tires.
 
 ## <span id="hello_dart">`hello-dart` Example</span> [**&#x25B4;**](#top)
 
-Command [`build.bat`](./hello-dart/build.bat) generates the executable `hello-dart.exe` from source file [`main.dart`](./hello-dart/src/main/dart/main.dart) and execute it.
+Command [`build.bat`](./hello-dart/build.bat) generates the executable `hello-dart.exe` from source file [`main.dart`](./hello-dart/src/main/dart/main.dart) and runs it.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="hello-dart/build.bat">build</a> -verbose clean run</b>
@@ -89,7 +89,7 @@ Hello, World!
 [build] _EXITCODE=0
 </pre>
 
-In the same way command [make] executes the build commands `clean` and `run` defined in project file [`Makefile`](./hello-dart/Makefile) :
+In the same way command [**`make.exe`**][make_cli] executes the build commands `clean` and `run` defined in project file [`Makefile`](./hello-dart/Makefile) :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
@@ -113,7 +113,7 @@ Hello, World!
 
 ## <span id="records">`records` Example</span> [**&#x25B4;**](#top)
 
-Command [`build.bat`](./records/build.bat) generates the executable `records.exe` from source file [`main.dart`](./records/src/main/dart/main.dart) and execute it.
+Command [`build.bat`](./records/build.bat) generates the executable `records.exe` from source file [`main.dart`](./records/src/main/dart/main.dart) and runs it.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./records/build.bat">build</a> -verbose clean run</b>
@@ -129,7 +129,7 @@ Hello John! Your ticket is: 0
 (-1.0, 7.0)
 </pre>
 
-In the same way command [make] executes the build commands `clean` and `run` defined in project file [`Makefile`](./records/Makefile) :
+In the same way command [**`make`**][make_cli] executes the build commands `clean` and `run` defined in project file [`Makefile`](./records/Makefile) :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://man7.org/linux/man-pages/man1/make.1.html" rel="external">make</a> clean run</b>
@@ -165,9 +165,9 @@ Hello John! Your ticket is: 51
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
-[make]: https://man7.org/linux/man-pages/man1/make.1.html
+[make_cli]: https://man7.org/linux/man-pages/man1/make.1.html
