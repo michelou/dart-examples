@@ -25,7 +25,8 @@
   - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
-  - [Dart 3.1 & a retrospective on functional style programming in Dart 3](https://medium.com/dartlang/dart-3-1-a-retrospective-on-functional-style-programming-in-dart-3-a1f4b3a7cdda) by Marya Belanger, August 2023.
+  - [Announcing Dart 3.2][blog_thomsen_dart32], November 2023.
+  - [Dart 3.1 & a retrospective on functional style programming in Dart 3][blog_belanger_dart31] by Marya Belanger, August 2023.
   - [Dart DevTools: Analyzing application performance with the CPU Profiler](https://medium.com/dartlang/dart-devtools-analyzing-application-performance-with-the-cpu-profiler-3e94a0ec06ae) by Ben Konyi, June 2023.
   - [Announcing Dart 3](https://medium.com/dartlang/announcing-dart-3-53f065a10635) by Michael Thomsen, May 2023.
   - [Introducing Dart 3 alpha](https://medium.com/dartlang/dart-3-alpha-f1458fb9d232) by Michael Thomsen, January 2023.
@@ -91,15 +92,21 @@
 - [Parctical Dart - Exercises for Beginners](https://hackmd.io/@kuzmapetrovich/S1x90jWGP) by Kuzma Petrovich, 2021.
 - [Dart Tutorial &ndash; Learning the Dart programming language](https://www.vogella.com/tutorials/Dart/article.html) by Lars Vogel, February 2021.
 
+## <span id="videos">Videos</span>
+
+- [Dart &ndash; A Well Structured Web Programming][video_bracha2012] by Gilad Bracha, April 2012.
+
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2023* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
 [article_nielsen]: https://dart.dev/articles/libraries/creating-streams
+[blog_belanger_dart31]: https://medium.com/dartlang/dart-3-1-a-retrospective-on-functional-style-programming-in-dart-3-a1f4b3a7cdda
 [blog_soares]: https://blog.logrocket.com/comparing-dart-typescript/
+[blog_thomsen_dart32]: https://medium.com/dartlang/dart-3-2-c8de8fe1b91f
 [blog_thomsen_dart3]: https://medium.com/dartlang/the-road-to-dart-3-afdd580fbefa
 [blog_thomsen_dart218]: https://medium.com/dartlang/dart-2-18-f4b3101f146c
 [blog_thomsen_dart217]: https://medium.com/dartlang/dart-2-17-b216bfc80c5d
@@ -117,3 +124,4 @@
 [dart_home]: https://dart.dev/
 [flutter_home]: https://flutter.dev/
 [tutorial_sande]: https://www.kodeco.com/22685966-dart-basics
+[video_bracha2012]: https://learn.microsoft.com/en-us/events/lang-next-2012/dart-well-structured-web-programming-language
