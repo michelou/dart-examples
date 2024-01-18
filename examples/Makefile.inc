@@ -13,19 +13,20 @@ DART       = $(subst \,/,$(DART_HOME))/bin/dart.exe
 HOME       = $(subst \,/,$(USERPROFILE))
 LOCAL_REPO = $(subst \,/,$(USERPROFILE))/.m2/repository
 PSEP       = ;
-## We grab Mingw version instead of C:\Windows\System32\curl.exe
-CURL       = $(subst \,/,$(GIT_HOME))/mingw64/bin/curl.exe
-ECHO       = $(subst \,/,$(GIT_HOME))/usr/bin/echo.exe
-## We grab Mingw version instead of C:\Windows\System32\find.exe
-FIND       = $(subst \,/,$(GIT_HOME))/usr/bin/find.exe
-MAKE       = $(subst \,/,$(MSYS_HOME))/usr/bin/make.exe
-MKDIR      = $(subst \,/,$(GIT_HOME))/usr/bin/mkdir.exe
-RM         = $(subst \,/,$(GIT_HOME))/usr/bin/rm.exe
-TOUCH      = $(subst \,/,$(GIT_HOME))/usr/bin/touch.exe
+## $(MSYS_HOME)\usr\bin\{cp.exe, make.exe, wget.exe}
+CP         = /usr/bin/cp.exe
+CURL       = /usr/bin/curl.exe
+ECHO       = /usr/bin/echo.exe
+FIND       = /usr/bin/find.exe
+MAKE       = /usr/bin/make.exe
+MKDIR      = /usr/bin/mkdir.exe
+RM         = /usr/bin/rm.exe
+TOUCH      = /usr/bin/touch.exe
 else
 DART       = dart
 LOCAL_REPO = $(HOME)/.m2/repository
 PSEP       = :
+CP         = cp
 CURL       = curl
 ECHO       = echo
 FIND       = find
