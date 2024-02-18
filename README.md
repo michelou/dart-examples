@@ -79,7 +79,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-   dart 3.2.6, make 4.4.1,
+   dart 3.3.0, make 4.4.1,
    git 2.43.0.windows.1, diff 3.10, bash 5.2.21(1)-release
    &nbsp;
      Options:
