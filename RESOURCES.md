@@ -14,6 +14,9 @@
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
+- [Sound null-safety for your Dart functions](https://appwrite.io/blog/post/sound-null-safety-for-your-dart-functions) by Vincent Ge, March 2024.
+- [Yayo's Blog](https://yayocode.com/):
+  - [Equality in Flutter and Dart with Equatable](https://yayocode.com/2024/01/19/equality_in_flutter_and_dart_with_equatable), January 2024.
 - [Christian's Blog](https://www.christianfindlay.com/blog/) :
   - [Dart 3: A Comprehensive Guide to Records and Futures](https://www.christianfindlay.com/blog/dart-records-and-futures), May 2023.
   - [Dart Switch Expressions](https://www.christianfindlay.com/blog/dart-switch-expressions), May 2023.
@@ -99,7 +102,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
