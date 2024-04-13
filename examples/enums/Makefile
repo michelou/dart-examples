@@ -1,5 +1,5 @@
 ##
-## Copyright (c) 2018-2023 Stéphane Micheloud
+## Copyright (c) 2018-2024 Stéphane Micheloud
 ##
 ## Licensed under the MIT License.
 ##
@@ -45,6 +45,22 @@ help:
 
 ##############################################################################
 ## doc rules
+
+TARGET_DOC_DIR = $(TARGET_DIR)/docs
+TARGET_DOC     = $(TARGET_DIR)/dart_doc.txt
+
+ifdef DEBUG
+DARTDOC_OPTS=--verbose --output "$(abspath $(TARGET_DOC_DIR))" "$(abspath $(SOURCE_DIR))/main/dart"
+else
+DARTDOC_OPTS=--output "$(abspath $(TARGET_DOC_DIR))" "$(abspath $(SOURCE_DIR))/main/dart"
+endif
+
+doc: $(TARGET_DOC)
+
+$(TARGET_DOC): $(SOURCES)
+	[ -d "$(TARGET_DOC_DIR)" ] || "$(MKDIR)" -p "$(TARGET_DOC_DIR)"
+	"$(DART)" doc $(DARTDOC_OPTS)
+	@$(TOUCH) "$(TARGET_DOC)"
 
 
 ##############################################################################

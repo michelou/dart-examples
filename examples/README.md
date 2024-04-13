@@ -13,6 +13,20 @@
 
 ## <span id="enums">`enums` Example</span>
 
+Project `enums` is organized as follows :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
+|   <a href="./enums/00download.txt">00download.txt</a>
+|   <a href="./enums/build.bat">build.bat</a>
+|   <a href="./enums/build.sh">build.sh</a>
+|   <a href="./enums/Makefile">Makefile</a>
+\---src
+    \---main
+        \---dart
+                <a href="./enums/src/main/dart/main.dart">main.dart</a>
+</pre>
+
 Command [**`build.bat run`**](./enums/build.bat) generates the executable `enums.exe` from source file [`main.dart`](./enums/src/main/dart/main.dart) and runs it.
 
 <pre style="font-size:80%;">
@@ -57,6 +71,19 @@ A car is a vehicle with 4 tires.
 </pre>
 
 ## <span id="hello_dart">`hello-dart` Example</span> [**&#x25B4;**](#top)
+
+Project `hello-dart` is organized as follows :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
+|   <a href="./hello-dart/build.bat">build.bat</a>
+|   <a href="./hello-dart/build.sh">build.sh</a>
+|   <a href="./hello-dart/Makefile">Makefile</a>
+\---src
+    \---main
+        \---dart
+                <a href="./hello-dart/src/main/dart/main.dart">main.dart</a>
+</pre>
 
 Command [`build.bat`](./hello-dart/build.bat) generates the executable `hello-dart.exe` from source file [`main.dart`](./hello-dart/src/main/dart/main.dart) and runs it.
 
@@ -112,6 +139,19 @@ Hello, World!
 </pre>
 
 ## <span id="records">`records` Example</span> [**&#x25B4;**](#top)
+
+Project `records` is organized as follows :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="">tree</a> /f /a . | <a href="">findstr</a> /v /b [A-Z]</b>
+|   <a href="./records/build.bat">build.bat</a>
+|   <a href="./records/build.sh">build.sh</a>
+|   <a href="./records/Makefile">Makefile</a>
+\---src
+    \---main
+        \---dart
+                <a href="./records/src/main/dart/main.dart">main.dart</a>
+</pre>
 
 Command [`build.bat`](./records/build.bat) generates the executable `records.exe` from source file [`main.dart`](./records/src/main/dart/main.dart) and runs it.
 

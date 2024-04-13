@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2023 Stéphane Micheloud
+# Copyright (c) 2018-2024 Stéphane Micheloud
 #
 # Licensed under the MIT License.
 #
@@ -147,7 +147,7 @@ compile() {
     local s=; [[ $n -gt 1 ]] && s="s"
     local n_files="$n Dart source file$s"
     local dart_opts="--output \"$TARGET_FILE\""
-    $DEBUG && set dart_opts="--verbose $dart_opts"
+    $DEBUG && dart_opts="--verbose $dart_opts"
     if $DEBUG; then
         debug "$DART_CMD compile exe $source_files $dart_opts"
     elif $VERBOSE; then
@@ -196,7 +196,7 @@ doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
     local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
-    $DEBUG && set dartdoc_opts="--verbose $dartdoc_opts"
+    $DEBUG && dartdoc_opts="--verbose $dartdoc_opts"
     if $DEBUG; then
         debug "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     elif $VERBOSE; then

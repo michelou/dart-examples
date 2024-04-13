@@ -17,6 +17,7 @@
 - [Sound null-safety for your Dart functions](https://appwrite.io/blog/post/sound-null-safety-for-your-dart-functions) by Vincent Ge, March 2024.
 - [Yayo's Blog](https://yayocode.com/):
   - [Equality in Flutter and Dart with Equatable](https://yayocode.com/2024/01/19/equality_in_flutter_and_dart_with_equatable), January 2024.
+  - [What is new in Dart 3? Exploring the new features](https://yayocode.com/2023/05/25/what_is_new_in_dart_3), May 2023.
 - [Christian's Blog](https://www.christianfindlay.com/blog/) :
   - [Dart 3: A Comprehensive Guide to Records and Futures](https://www.christianfindlay.com/blog/dart-records-and-futures), May 2023.
   - [Dart Switch Expressions](https://www.christianfindlay.com/blog/dart-switch-expressions), May 2023.
