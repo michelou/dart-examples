@@ -10,6 +10,8 @@
 
 ## <span id="articles">Articles</span>
 
+- [Code Generation with Dart & Flutter: The Ultimate Guide][article_leushchenko] by Anna Leuschchenko, April 2024.
+- [Understanding JIT and AOT Compilation in Dart][article_aldaya] by Marwa Aldaya, November 2023.
 - [Creating streams in Dart][article_nielsen] by Lasse Nielsen, April 2013.
 
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
@@ -99,15 +101,18 @@
 
 ## <span id="videos">Videos</span>
 
+- [Building an Optimising Compiler for Dart][video_egorov] by Vyacheslav Egorov, January 2014.
 - [Dart &ndash; A Well Structured Web Programming][video_bracha2012] by Gilad Bracha, April 2012.
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/April 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/May 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
 
+[article_aldaya]: https://www.linkedin.com/pulse/understanding-jit-aot-compilation-dart-marwa-aldaya-tnycf
+[article_leushchenko]: https://codewithandrea.com/articles/dart-flutter-code-generation/
 [article_nielsen]: https://dart.dev/articles/libraries/creating-streams
 [blog_belanger_dart31]: https://medium.com/dartlang/dart-3-1-a-retrospective-on-functional-style-programming-in-dart-3-a1f4b3a7cdda
 [blog_soares]: https://blog.logrocket.com/comparing-dart-typescript/
@@ -130,3 +135,4 @@
 [flutter_home]: https://flutter.dev/
 [tutorial_sande]: https://www.kodeco.com/22685966-dart-basics
 [video_bracha2012]: https://learn.microsoft.com/en-us/events/lang-next-2012/dart-well-structured-web-programming-language
+[video_egorov]: https://www.infoq.com/presentations/dart-compiler/
