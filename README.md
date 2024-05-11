@@ -6,7 +6,7 @@
     <a href="https://dart.dev/" rel="external"><img style="border:0;" src="docs/images/dart-lang.png" alt="Dart project"/></a>
   </td>
   <td style="border:0;padding:0;vertical-align:text-top;">
-    This repository gathers <a href="https://dart.dev/" rel="external">Dart 3</a> code examples coming from various websites - mostly from the <a href="https://dart.dev" rel="external">Dart</a> project - or written by myself.<br/>
+    This repository gathers <a href="https://dart.dev/" rel="external">Dart 3</a> code examples coming from various websites - mostly from the <a href="https://dart.dev" rel="external">Dart</a> project - or written by ourself.<br/>
     In particular it includes several build scripts (<a href="https://www.gnu.org/software/bash/manual/bash.html" rel="external">Bash scripts</a>, <a href="https://en.wikibooks.org/wiki/Windows_Batch_Scripting" rel="external">batch files</a>, <a href="https://makefiletutorial.com/" rel="external">Make scripts</a>) for experimenting with the <a href="https://dart.dev/guides/language/spec" rel="external">Dart 3</a> language on a Windows machine.
   </td>
   </tr>
@@ -25,7 +25,7 @@ This project depends on the following external software for the **Microsoft Wind
 
 Optionally one may also install the following software:
 
-- [Visual Studio Code 1.88][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.89][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
@@ -82,7 +82,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
       dart 3.3.4, make 4.4.1,
-      git 2.44.0.windows.1, diff 3.10, bash 5.2.26(1)-release
+      git 2.45.0, diff 3.10, bash 5.2.26(1)-release
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
    C:\opt\Git\bin\git.exe
@@ -99,7 +99,7 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 Select drive I: for which a substitution already exists
 Tool versions:
    dart 3.3.4, make 4.4.1,
-   git 2.44.0.windows.1, diff 3.10, bash 5.2.26(1)-release
+   git 2.45.0, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
    C:\opt\msys64\usr\bin\make.exe
@@ -124,7 +124,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 </p>
 <pre style="font-size:80%;">
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.44.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 </pre>
 </dd></dl>
 
@@ -156,29 +156,29 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 
 <!-- link refs -->
 
-[ada_examples]: https://github.com/michelou/ada-examples
-[akka_examples]: https://github.com/michelou/akka-examples
-[cobol_examples]: https://github.com/michelou/cobol-examples
-[cpp_examples]: https://github.com/michelou/cpp-examples
+[ada_examples]: https://github.com/michelou/ada-examples?tab=readme-ov-file#playing-with-ada-on-windows
+[akka_examples]: https://github.com/michelou/akka-examples?tab=readme-ov-file#playing-with-akka-on-windows
+[cobol_examples]: https://github.com/michelou/cobol-examples?tab=readme-ov-file#playing-with-cobol-on-windows
+[cpp_examples]: https://github.com/michelou/cpp-examples?tab=readme-ov-file#playing-with-c-on-windows
 [dart]: https://dart.dev/
 [dart_changelog]: https://github.com/dart-lang/sdk/blob/master/CHANGELOG.md
 [dart_issue_tracker]: https://github.com/dart-lang/sdk/issues
 [dart_releases]: https://dart.dev/get-dart/archive#stable-channel
-[deno_examples]: https://github.com/michelou/deno-examples
+[deno_examples]: https://github.com/michelou/deno-examples?tab=readme-ov-file#playing-with-deno-on-windows
 [docker_examples]: https://github.com/michelou/docker-examples
-[flix_examples]: https://github.com/michelou/flix-examples
+[flix_examples]: https://github.com/michelou/flix-examples?tab=readme-ov-file#playing-with-flix-on-windows
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.44.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.0.txt
 [github_markdown]: https://github.github.com/gfm/
-[golang_examples]: https://github.com/michelou/golang-examples
-[graalvm_examples]: https://github.com/michelou/graalvm-examples
-[haskell_examples]: https://github.com/michelou/haskell-examples
+[golang_examples]: https://github.com/michelou/golang-examples?tab=readme-ov-file#playing-with-go-on-windows
+[graalvm_examples]: https://github.com/michelou/graalvm-examples?tab=readme-ov-file#playing-with-graalvm-on-windows
+[haskell_examples]: https://github.com/michelou/haskell-examples?tab=readme-ov-file#playing-with-haskell-on-windows
 [jmh]: https://openjdk.java.net/projects/code-tools/jmh/
-[kafka_examples]: https://github.com/michelou/kafka-examples
-[kotlin_examples]: https://github.com/michelou/kotlin-examples
-[llvm_examples]: https://github.com/michelou/llvm-examples
-[m2_examples]: https://github.com/michelou/m2-examples
+[kafka_examples]: https://github.com/michelou/kafka-examples?tab=readme-ov-file#playing-with-kafka-on-windows
+[kotlin_examples]: https://github.com/michelou/kotlin-examples?tab=readme-ov-file#playing-with-kotlin-on-windows
+[llvm_examples]: https://github.com/michelou/llvm-examples?tab=readme-ov-file#playing-with-llvm-on-windows
+[m2_examples]: https://github.com/michelou/m2-examples?tab=readme-ov-file#playing-with-modula-2-on-windows
 [make_cli]: https://www.gnu.org/software/make/manual/html_node/Running.html
 [man1_awk]: https://www.linux.org/docs/man1/awk.html
 [man1_diff]: https://www.linux.org/docs/man1/diff.html
