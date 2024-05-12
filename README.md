@@ -12,7 +12,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Deno][deno_examples], [Docker][docker_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples] and [WiX Toolset][wix_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Dart 3 contains three major advancements. Read the document ["Announcing Dart 3"](https://medium.com/dartlang/announcing-dart-3-53f065a10635) for more details. Furthermore the document ["Dart language evolution"](https://dart.dev/guides/language/evolution) describes changes and additions to the Dart language.
 
@@ -21,10 +21,11 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Dart 3][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
-- [Git 2.44][git_releases] ([*release notes*][git_relnotes])
+- [Git 2.45][git_releases] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
+- [ConEmu][conemu_downloads] ([*release notes*][conemu_relnotes])
 - [Visual Studio Code 1.89][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
@@ -33,6 +34,7 @@ Optionally one may also install the following software:
 For instance our development environment looks as follows (*May 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
+C:\opt\ConEmu\      <i>( 26 MB)</i>
 C:\opt\dart-sdk\    <i>(534 MB)</i>
 C:\opt\Git\         <i>(367 MB)</i>
 C:\opt\VSCode\      <i>(341 MB)</i>
@@ -123,8 +125,10 @@ Path associations:
 In our case we downloaded the following installation files (<a href="#proj_deps">see section 1</a>):
 </p>
 <pre style="font-size:80%;">
+<a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.89.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -159,6 +163,8 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [ada_examples]: https://github.com/michelou/ada-examples?tab=readme-ov-file#playing-with-ada-on-windows
 [akka_examples]: https://github.com/michelou/akka-examples?tab=readme-ov-file#playing-with-akka-on-windows
 [cobol_examples]: https://github.com/michelou/cobol-examples?tab=readme-ov-file#playing-with-cobol-on-windows
+[conemu_downloads]: https://github.com/Maximus5/ConEmu/releases
+[conemu_relnotes]: https://conemu.github.io/blog/2023/07/24/Build-230724.html
 [cpp_examples]: https://github.com/michelou/cpp-examples?tab=readme-ov-file#playing-with-c-on-windows
 [dart]: https://dart.dev/
 [dart_changelog]: https://github.com/dart-lang/sdk/blob/master/CHANGELOG.md
@@ -166,6 +172,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [dart_releases]: https://dart.dev/get-dart/archive#stable-channel
 [deno_examples]: https://github.com/michelou/deno-examples?tab=readme-ov-file#playing-with-deno-on-windows
 [docker_examples]: https://github.com/michelou/docker-examples
+[erlang_examples]: https://github.com/michelou/erlang-examples
 [flix_examples]: https://github.com/michelou/flix-examples?tab=readme-ov-file#playing-with-flix-on-windows
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
