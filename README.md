@@ -84,7 +84,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
       dart 3.3.4, make 4.4.1,
-      git 2.45.0, diff 3.10, bash 5.2.26(1)-release
+      git 2.45.1, diff 3.10, bash 5.2.26(1)-release
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
    C:\opt\Git\bin\git.exe
@@ -101,7 +101,7 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 Select drive I: for which a substitution already exists
 Tool versions:
    dart 3.3.4, make 4.4.1,
-   git 2.45.0, diff 3.10, bash 5.2.26(1)-release
+   git 2.45.1, diff 3.10, bash 5.2.26(1)-release
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
    C:\opt\msys64\usr\bin\make.exe
@@ -127,7 +127,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 <pre style="font-size:80%;">
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.45.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.45.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
 <a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.89.1.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
@@ -160,32 +160,32 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 
 <!-- link refs -->
 
-[ada_examples]: https://github.com/michelou/ada-examples?tab=readme-ov-file#playing-with-ada-on-windows
-[akka_examples]: https://github.com/michelou/akka-examples?tab=readme-ov-file#playing-with-akka-on-windows
-[cobol_examples]: https://github.com/michelou/cobol-examples?tab=readme-ov-file#playing-with-cobol-on-windows
+[ada_examples]: https://github.com/michelou/ada-examples#top
+[akka_examples]: https://github.com/michelou/akka-examples#top
+[cobol_examples]: https://github.com/michelou/cobol-examples#top
 [conemu_downloads]: https://github.com/Maximus5/ConEmu/releases
 [conemu_relnotes]: https://conemu.github.io/blog/2023/07/24/Build-230724.html
-[cpp_examples]: https://github.com/michelou/cpp-examples?tab=readme-ov-file#playing-with-c-on-windows
+[cpp_examples]: https://github.com/michelou/cpp-examples#top
 [dart]: https://dart.dev/
 [dart_changelog]: https://github.com/dart-lang/sdk/blob/master/CHANGELOG.md
 [dart_issue_tracker]: https://github.com/dart-lang/sdk/issues
 [dart_releases]: https://dart.dev/get-dart/archive#stable-channel
-[deno_examples]: https://github.com/michelou/deno-examples?tab=readme-ov-file#playing-with-deno-on-windows
-[docker_examples]: https://github.com/michelou/docker-examples
-[erlang_examples]: https://github.com/michelou/erlang-examples
-[flix_examples]: https://github.com/michelou/flix-examples?tab=readme-ov-file#playing-with-flix-on-windows
+[deno_examples]: https://github.com/michelou/deno-examples#top
+[docker_examples]: https://github.com/michelou/docker-examples#top
+[erlang_examples]: https://github.com/michelou/erlang-examples#top
+[flix_examples]: https://github.com/michelou/flix-examples#top
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.0.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.45.1.txt
 [github_markdown]: https://github.github.com/gfm/
-[golang_examples]: https://github.com/michelou/golang-examples?tab=readme-ov-file#playing-with-go-on-windows
-[graalvm_examples]: https://github.com/michelou/graalvm-examples?tab=readme-ov-file#playing-with-graalvm-on-windows
-[haskell_examples]: https://github.com/michelou/haskell-examples?tab=readme-ov-file#playing-with-haskell-on-windows
+[golang_examples]: https://github.com/michelou/golang-examples#top
+[graalvm_examples]: https://github.com/michelou/graalvm-examples#top
+[haskell_examples]: https://github.com/michelou/haskell-examples#top
 [jmh]: https://openjdk.java.net/projects/code-tools/jmh/
-[kafka_examples]: https://github.com/michelou/kafka-examples?tab=readme-ov-file#playing-with-kafka-on-windows
-[kotlin_examples]: https://github.com/michelou/kotlin-examples?tab=readme-ov-file#playing-with-kotlin-on-windows
-[llvm_examples]: https://github.com/michelou/llvm-examples?tab=readme-ov-file#playing-with-llvm-on-windows
-[m2_examples]: https://github.com/michelou/m2-examples?tab=readme-ov-file#playing-with-modula-2-on-windows
+[kafka_examples]: https://github.com/michelou/kafka-examples#top
+[kotlin_examples]: https://github.com/michelou/kotlin-examples#top
+[llvm_examples]: https://github.com/michelou/llvm-examples#top
+[m2_examples]: https://github.com/michelou/m2-examples#top
 [make_cli]: https://www.gnu.org/software/make/manual/html_node/Running.html
 [man1_awk]: https://www.linux.org/docs/man1/awk.html
 [man1_diff]: https://www.linux.org/docs/man1/diff.html
@@ -196,14 +196,14 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [man1_rmdir]: https://www.linux.org/docs/man1/rmdir.html
 [man1_sed]: https://www.linux.org/docs/man1/sed.html
 [man1_wc]: https://www.linux.org/docs/man1/wc.html
-[nodejs_examples]: https://github.com/michelou/nodejs-examples
-[rust_examples]: https://github.com/michelou/rust-examples
-[scala3_examples]: https://github.com/michelou/dotty-examples
+[nodejs_examples]: https://github.com/michelou/nodejs-examples#top
+[rust_examples]: https://github.com/michelou/rust-examples#top
+[scala3_examples]: https://github.com/michelou/dotty-examples#top
 [scala3_metaprogramming]: https://dotty.epfl.ch/docs/reference/metaprogramming/toc.html
 [sh_cli]: https://man7.org/linux/man-pages/man1/sh.1p.html
-[spark_examples]: https://github.com/michelou/spark-examples
-[spring_examples]: https://github.com/michelou/spring-examples
-[trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples
+[spark_examples]: https://github.com/michelou/spark-examples#top
+[spring_examples]: https://github.com/michelou/spring-examples#top
+[trufflesqueak_examples]: https://github.com/michelou/trufflesqueak-examples#top
 [unix_opt]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/opt.html
 [vscode_downloads]: https://code.visualstudio.com/#alt-downloads
 [vscode_relnotes]: https://code.visualstudio.com/updates/
@@ -211,5 +211,5 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [windows_installer]: https://docs.microsoft.com/en-us/windows/win32/msi/windows-installer-portal
 [windows_limitation]: https://support.microsoft.com/en-gb/help/830473/command-prompt-cmd-exe-command-line-string-limitation
 [windows_subst]: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/subst
-[wix_examples]: https://github.com/michelou/wix-examples
+[wix_examples]: https://github.com/michelou/wix-examples#top
 [zip_archive]: https://www.howtogeek.com/178146/htg-explains-everything-you-need-to-know-about-zipped-files/
