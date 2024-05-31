@@ -1,4 +1,4 @@
-# <span id="top">Dart 3 examples</span> <span style="size:30%;"><a href="../README.md">⬆</a></span>
+# <span id="top">Dart 3 examples</span> <span style="font-size:90%;">[⬆](../README.md#top)</span>
 
 <table style="font-family:Helvetica;line-height:1.6;">
   <tr>
@@ -13,7 +13,7 @@
 
 ## <span id="enums">`enums` Example</span>
 
-Project `enums` is organized as follows :
+Example `enums` has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
@@ -72,7 +72,7 @@ A car is a vehicle with 4 tires.
 
 ## <span id="hello_dart">`hello-dart` Example</span> [**&#x25B4;**](#top)
 
-Project `hello-dart` is organized as follows :
+Example `hello-dart` has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
@@ -140,7 +140,7 @@ Hello, World!
 
 ## <span id="records">`records` Example</span> [**&#x25B4;**](#top)
 
-Project `records` is organized as follows :
+Example `records` has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="">tree</a> /f /a . | <a href="">findstr</a> /v /b [A-Z]</b>

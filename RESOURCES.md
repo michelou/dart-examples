@@ -17,6 +17,8 @@
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
 - [Sound null-safety for your Dart functions](https://appwrite.io/blog/post/sound-null-safety-for-your-dart-functions) by Vincent Ge, March 2024.
+- [Reflection in Dart: A Deep Dive into Dart's Reflective Capabilities](https://www.dhiwise.com/post/reflection-in-dart-a-deep-dive-into-dart-reflective-capabilities), by DhiWise, December 2023.
+- [Du Dart dans votre backend ? C’est possible !](https://blog.octo.com/du-dart-dans-votre-backend-cest-possible), by Fabien VallEe, July 2023.
 - [Yayo's Blog](https://yayocode.com/):
   - [Equality in Flutter and Dart with Equatable](https://yayocode.com/2024/01/19/equality_in_flutter_and_dart_with_equatable), January 2024.
   - [What is new in Dart 3? Exploring the new features](https://yayocode.com/2023/05/25/what_is_new_in_dart_3), May 2023.
@@ -31,6 +33,7 @@
   - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
+  - [Announcing Dart 3.4](https://medium.com/dartlang/dart-3-4-bd8d23b4462a), May 2024.
   - [New in Dart 3.3: Extension Types, JavaScript Interop, and More](https://medium.com/dartlang/dart-3-3-325bf2bf6c13), February 2024.
   - [Announcing Dart 3.2][blog_thomsen_dart32], November 2023.
   - [Dart 3.1 & a retrospective on functional style programming in Dart 3][blog_belanger_dart31] by Marya Belanger, August 2023.
@@ -94,6 +97,7 @@
 
 ## <span id="tutorials">Tutorials</span>
 
+- [Introduction to Dart VM](https://mrale.ph/dartvm/), October 2022.
 - [Dart Tutorial](https://mindmajix.com/dart-tutorial) by Sowmithri Viswanath, 2022.
 - [Dart Basics][tutorial_sande] by Jonathan Sande, June 2021.
 - [Parctical Dart - Exercises for Beginners](https://hackmd.io/@kuzmapetrovich/S1x90jWGP) by Kuzma Petrovich, 2021.
