@@ -3,8 +3,7 @@
 <table style="font-family:Helvetica,Arial;line-height:1.6;">
   <tr>
   <td style="border:0;padding:0 10px 0 0;min-width:100px;"><a href="https://dart.dev/" rel="external"><img style="border:0;" src="docs/images/dart-lang.png" width="100" alt="Dart project"/></a></td>
-  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://dart.dev/" rel="external">Dart</a> related resources that caught our attention.
-  </td>
+  <td style="border:0;padding:0;vertical-align:text-top;">This document gathers <a href="https://dart.dev/" rel="external">Dart</a> related resources that caught our attention.</td>
   </tr>
 </table>
 
