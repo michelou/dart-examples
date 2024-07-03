@@ -21,9 +21,9 @@ Example `enums` has the following directory structure :
 |   <a href="./enums/build.bat">build.bat</a>
 |   <a href="./enums/build.sh">build.sh</a>
 |   <a href="./enums/Makefile">Makefile</a>
-\---src
-    \---main
-        \---dart
+\---<b>src</b>
+    \---<b>main</b>
+        \---<b>dart</b>
                 <a href="./enums/src/main/dart/main.dart">main.dart</a>
 </pre>
 
@@ -79,9 +79,9 @@ Example `hello-dart` has the following directory structure :
 |   <a href="./hello-dart/build.bat">build.bat</a>
 |   <a href="./hello-dart/build.sh">build.sh</a>
 |   <a href="./hello-dart/Makefile">Makefile</a>
-\---src
-    \---main
-        \---dart
+\---<b>src</b>
+    \---<b>main</b>
+        \---<b>dart</b>
                 <a href="./hello-dart/src/main/dart/main.dart">main.dart</a>
 </pre>
 
@@ -147,9 +147,9 @@ Example `records` has the following directory structure :
 |   <a href="./records/build.bat">build.bat</a>
 |   <a href="./records/build.sh">build.sh</a>
 |   <a href="./records/Makefile">Makefile</a>
-\---src
-    \---main
-        \---dart
+\---<b>src</b>
+    \---<b>main</b>
+        \---<b>dart</b>
                 <a href="./records/src/main/dart/main.dart">main.dart</a>
 </pre>
 
@@ -205,7 +205,7 @@ Hello John! Your ticket is: 51
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/June 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/July 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
