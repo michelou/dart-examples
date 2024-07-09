@@ -12,7 +12,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig](zig_examples) are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Dart 3 contains three major advancements. Read the document ["Announcing Dart 3"](https://medium.com/dartlang/announcing-dart-3-53f065a10635) for more details. Furthermore the document ["Dart language evolution"](https://dart.dev/guides/language/evolution) describes changes and additions to the Dart language.
 
@@ -26,7 +26,7 @@ This project depends on the following external software for the **Microsoft Wind
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.90][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.91][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
@@ -128,7 +128,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.45.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.90.2.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.91.0.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
