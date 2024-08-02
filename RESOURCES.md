@@ -85,15 +85,16 @@
 
 - [Twitter &ndash; Dart Language](https://twitter.com/dart_lang).
 
-## <span id="tools">Tools</span>
-
-- [DartPad](https://dartpad.dev/) &ndash; an online [Dart][dart_home] editor with support for console, web, and Flutter apps.
-- [Official Dart lint rules](https://pub.dev/packages/lints) &ndash; a static analyzer for [Dart][dart_home].
-- [Protocol Buffer Basics: Dart](https://protobuf.dev/getting-started/darttutorial/) &ndash; working with protocol buffers in [Dart][dart_home].
-
 ## <span id="talks">Talks</span>
 
 - [Building an Optimising Compiler for Dart](https://www.infoq.com/presentations/dart-compiler/) (*31 minutes*) by Vyacheslav Egorov, January 2014.
+
+## <span id="tools">Tools and Libraries</span>
+
+- [DartPad](https://dartpad.dev/) &ndash; an online [Dart][dart_home] editor with support for console, web, and Flutter apps.
+[dio](https://pub.dev/packages/dio) &ndash; a powerful HTTP networking package for Dart/Flutter.
+- [Official Dart lint rules](https://pub.dev/packages/lints) &ndash; a static analyzer for [Dart][dart_home].
+- [Protocol Buffer Basics: Dart](https://protobuf.dev/getting-started/darttutorial/) &ndash; working with protocol buffers in [Dart][dart_home].
 
 ## <span id="tutorials">Tutorials</span>
 
@@ -110,7 +111,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/July 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
