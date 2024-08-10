@@ -132,8 +132,7 @@ compile() {
     [[ -d "$TARGET_DIR" ]] || mkdir -p "$TARGET_DIR"
 
     local is_required="$(action_required "$TARGET_FILE" "$SOURCE_DIR/main/dart/" "*.dart")"
-    [[ $is_required -eq 0 ]] && return 1
-
+    [[ $is_required -eq 0 ]] && return 0
     local source_files=
     local n=0
     for f in $(find "$SOURCE_DIR/main/dart/" -type f -name "*.dart" 2>/dev/null); do
@@ -157,27 +156,26 @@ compile() {
     if [[ $? -ne 0 ]]; then
         error "Failed to compile $n_files to directory \"${TARGET_DIR/$ROOT_DIR\//}\""
         cleanup 1
-    fi  
+    fi
 }
 
 action_required() {
-    local timestamp_file=$1
+    local target_file=$1
     local search_path=$2
     local search_pattern=$3
-    local latest=
-    for f in $(find $search_path -name $search_pattern 2>/dev/null); do
-        [[ $f -nt $latest ]] && latest=$f
+    local source_file=
+    for f in $(find "$search_path" -type f -name "$search_pattern" 2>/dev/null); do
+        [[ $f -nt $source_file ]] && source_file=$f
     done
-    if [[ -z "$latest" ]]; then
+    if [[ -z "$source_file" ]]; then
         ## Do not compile if no source file
         echo 0
-    elif [[ ! -f "$timestamp_file" ]]; then
-        ## Do compile if timestamp file doesn't exist
+    elif [[ ! -f "$target_file" ]]; then
+        ## Do compile if target file doesn't exist
         echo 1
     else
-        ## Do compile if timestamp file is older than most recent source file
-        local timestamp=$(stat -c %Y $timestamp_file)
-        [[ $timestamp_file -nt $latest ]] && echo 1 || echo 0
+        ## Do compile if target file is older than most recent source file
+        [[ $source_file -nt $target_file ]] && echo 1 || echo 0
     fi
 }
 
@@ -258,10 +256,10 @@ EXITCODE=0
 
 ROOT_DIR="$(getHome)"
 
-SOURCE_DIR=$ROOT_DIR/src
-MAIN_SOURCE_DIR=$SOURCE_DIR/main/scala
-TARGET_DIR=$ROOT_DIR/target
-TARGET_DOCS_DIR=$TARGET_DIR/docs
+SOURCE_DIR="$ROOT_DIR/src"
+MAIN_SOURCE_DIR="$SOURCE_DIR/main/scala"
+TARGET_DIR="$ROOT_DIR/target"
+TARGET_DOCS_DIR="$TARGET_DIR/docs"
 
 CLEAN=false
 COMPILE=false
@@ -313,9 +311,8 @@ PROJECT_URL="github.com/$USER/dart-examples"
 PROJECT_VERSION="1.0-SNAPSHOT"
 
 APP_NAME="records"
-APP_VERSION="0.1.0"
 
-TARGET_FILE="$TARGET_DIR/$APP_NAME-$APP_VERSION.exe"
+TARGET_FILE="$TARGET_DIR/$APP_NAME.exe"
 
 args "$@"
 [[ $EXITCODE -eq 0 ]] || cleanup 1
