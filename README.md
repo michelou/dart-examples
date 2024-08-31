@@ -31,11 +31,11 @@ Optionally one may also install the following software:
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
 
-For instance our development environment looks as follows (*August 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*September 2024*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\      <i>( 26 MB)</i>
-C:\opt\dart-sdk\    <i>(534 MB)</i>
+C:\opt\dart-sdk\    <i>(542 MB)</i>
 C:\opt\Git\         <i>(367 MB)</i>
 C:\opt\VSCode\      <i>(341 MB)</i>
 </pre>
@@ -44,7 +44,7 @@ C:\opt\VSCode\      <i>(341 MB)</i>
 
 ## <span id="structure">Directory structure</span> [**&#x25B4;**](#top)
 
-This project is organized as follows:
+This project has the following directory structure :
 
 <pre style="font-size:80%;">
 bin\
@@ -83,7 +83,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-      dart 3.5.0, make 4.4.1,
+      dart 3.5.2, make 4.4.1,
       git 2.46.0, diff 3.10, bash 5.2.26(1)
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
@@ -100,7 +100,7 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 <b>&gt; <a href="./setenv.bat">setenv -verbose</a></b>
 Select drive I: for which a substitution already exists
 Tool versions:
-   dart 3.5.0, make 4.4.1,
+   dart 3.5.2, make 4.4.1,
    git 2.46.0, diff 3.10, bash 5.2.26(1)
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
@@ -155,7 +155,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

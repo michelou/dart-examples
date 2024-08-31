@@ -94,6 +94,7 @@
 ## <span id="tools">Tools and Libraries</span>
 
 - [DartPad](https://dartpad.dev/) &ndash; an online [Dart][dart_home] editor with support for console, web, and Flutter apps.
+- [DCli](https://dcli.onepub.dev/) &ndash; a console SDK to create CLI applications.
 [dio](https://pub.dev/packages/dio) &ndash; a powerful HTTP networking package for Dart/Flutter.
 - [Official Dart lint rules](https://pub.dev/packages/lints) &ndash; a static analyzer for [Dart][dart_home].
 - [Protocol Buffer Basics: Dart](https://protobuf.dev/getting-started/darttutorial/) &ndash; working with protocol buffers in [Dart][dart_home].
@@ -113,7 +114,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/August 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/September 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
