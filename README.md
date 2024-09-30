@@ -83,7 +83,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-      dart 2.5.3, make 4.4.1,
+      dart 3.5.3, make 4.4.1,
       git 2.46.2, diff 3.10, bash 5.2.37(1)
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
@@ -100,7 +100,7 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 <b>&gt; <a href="./setenv.bat">setenv -verbose</a></b>
 Select drive I: for which a substitution already exists
 Tool versions:
-   dart 2.5.3, make 4.4.1,
+   dart 3.5.3, make 4.4.1,
    git 2.46.2, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
