@@ -12,7 +12,7 @@
   </tr>
 </table>
 
-[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
+[Ada][ada_examples], [Akka][akka_examples], [C++][cpp_examples], [COBOL][cobol_examples], [Dafny][dafny_examples], [Deno][deno_examples], [Docker][docker_examples], [Erlang][erlang_examples], [Flix][flix_examples], [Golang][golang_examples], [GraalVM][graalvm_examples], [Haskell][haskell_examples], [Kafka][kafka_examples], [Kotlin][kotlin_examples], [LLVM][llvm_examples], [Modula-2][m2_examples], [Node.js][nodejs_examples], [Rust][rust_examples], [Scala 3][scala3_examples], [Spark][spark_examples], [Spring][spring_examples], [TruffleSqueak][trufflesqueak_examples], [WiX Toolset][wix_examples] and [Zig][zig_examples] are other topics we are continuously monitoring.
 
 > **&#9755;** Dart 3 contains three major advancements. Read the document ["Announcing Dart 3"](https://medium.com/dartlang/announcing-dart-3-53f065a10635) for more details. Furthermore the document ["Dart language evolution"](https://dart.dev/guides/language/evolution) describes changes and additions to the Dart language.
 
@@ -21,12 +21,12 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Dart 3.5][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
-- [Git 2.46][git_releases] ([*release notes*][git_relnotes])
+- [Git 2.47][git_releases] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.93][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.94][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
@@ -37,7 +37,7 @@ For instance our development environment looks as follows (*October 2024*) <sup 
 C:\opt\ConEmu\      <i>( 26 MB)</i>
 C:\opt\dart-sdk\    <i>(542 MB)</i>
 C:\opt\Git\         <i>(367 MB)</i>
-C:\opt\VSCode\      <i>(341 MB)</i>
+C:\opt\VSCode\      <i>7341 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
@@ -83,8 +83,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-      dart 3.5.3, make 4.4.1,
-      git 2.46.2, diff 3.10, bash 5.2.37(1)
+      dart 3.5.4, make 4.4.1,
+      git 2.47.0, diff 3.10, bash 5.2.37(1)
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
    C:\opt\Git\bin\git.exe
@@ -100,8 +100,8 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 <b>&gt; <a href="./setenv.bat">setenv -verbose</a></b>
 Select drive I: for which a substitution already exists
 Tool versions:
-   dart 3.5.3, make 4.4.1,
-   git 2.46.2, diff 3.10, bash 5.2.37(1)
+   dart 3.5.4, make 4.4.1,
+   git 2.47.0, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
    C:\opt\msys64\usr\bin\make.exe
@@ -127,8 +127,8 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 <pre style="font-size:80%;">
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.46.2-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.93.1.zip</a>       <i>(131 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.47.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.94.2.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -170,13 +170,14 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [dart_changelog]: https://github.com/dart-lang/sdk/blob/master/CHANGELOG.md
 [dart_issue_tracker]: https://github.com/dart-lang/sdk/issues
 [dart_releases]: https://dart.dev/get-dart/archive#stable-channel
+[dafny_examples]: https://github.com/michelou/dafny-examples#top
 [deno_examples]: https://github.com/michelou/deno-examples#top
 [docker_examples]: https://github.com/michelou/docker-examples#top
 [erlang_examples]: https://github.com/michelou/erlang-examples#top
 [flix_examples]: https://github.com/michelou/flix-examples#top
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.46.2.txt
+[git_relnotes]: https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.47.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
