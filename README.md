@@ -37,7 +37,7 @@ For instance our development environment looks as follows (*October 2024*) <sup 
 C:\opt\ConEmu\      <i>( 26 MB)</i>
 C:\opt\dart-sdk\    <i>(542 MB)</i>
 C:\opt\Git\         <i>(367 MB)</i>
-C:\opt\VSCode\      <i>7341 MB)</i>
+C:\opt\VSCode\      <i>(371 MB)</i>
 </pre>
 
 > **:mag_right:** [Git for Windows][git_releases] provides a Bash emulation used to run [**`git.exe`**][git_cli] from the command line (as well as over 250 Unix commands like [**`awk`**][man1_awk], [**`diff`**][man1_diff], [**`file`**][man1_file], [**`grep`**][man1_grep], [**`more`**][man1_more], [**`mv`**][man1_mv], [**`rmdir`**][man1_rmdir], [**`sed`**][man1_sed] and [**`wc`**][man1_wc]).
