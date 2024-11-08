@@ -59,6 +59,8 @@
 - [Dart Futures: The Fundamentals](https://betterprogramming.pub/introduction-to-futures-in-dart-4edf6db3da90) by Darsshan Nair, December 2022.
 - [The road to Dart 3: A fully sound, null safe language][blog_thomsen_dart3] by Michael Thomsen, December 2022.
 - [Comparing Dart and TypeScript][blog_soares] by Will Soares, November 2022.
+- [Hank's](https://www.nequalsonelifestyle.com/tags/dart/) Blog :
+  - [Dart Result Monad 2.0 Updates](https://www.nequalsonelifestyle.com/2022/10/09/dart-result-monad-2-updates/), October 2022.
 - [Dart: The Features I Wish It Had][blog_zurek] by Alex Zurek, August 2021.
 - [Mastering Dart Collections](https://proandroiddev.com/mastering-dart-collections-dd27f1df5677) by Denis Cràciunescu, July 2021.
 - [Interesting Features of the Dart Programming Language](https://renato.athaydes.com/posts/interesting-dart-features.html) by Renato Athaydes, July 2019.
@@ -114,7 +116,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/October 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/November 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

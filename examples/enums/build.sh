@@ -20,7 +20,7 @@ getHome() {
 
 debug() {
     local DEBUG_LABEL="[46m[DEBUG][0m"
-    $DEBUG && echo "$DEBUG_LABEL $1" 1>&2
+    [[ $DEBUG -eq 1 ]] && echo "$DEBUG_LABEL $1" 1>&2
 }
 
 warning() {
@@ -37,7 +37,7 @@ error() {
 cleanup() {
     [[ $1 =~ ^[0-1]$ ]] && EXITCODE=$1
 
-    if $TIMER; then
+    if [[ $TIMER -eq 1 ]]; then
         local TIMER_END=$(date +'%s')
         local duration=$((TIMER_END - TIMER_START))
         echo "Total execution time: $(date -d @$duration +'%H:%M:%S')" 1>&2
@@ -47,26 +47,26 @@ cleanup() {
 }
 
 args() {
-    [[ $# -eq 0 ]] && HELP=true && return 1
+    [[ $# -eq 0 ]] && HELP=1 && return 1
 
     for arg in "$@"; do
         case "$arg" in
         ## options
-        -debug)    DEBUG=true ;;
-        -help)     HELP=true ;;
-        -timer)    TIMER=true ;;
-        -verbose)  VERBOSE=true ;;
+        -debug)    DEBUG=1 ;;
+        -help)     HELP=1 ;;
+        -timer)    TIMER=1 ;;
+        -verbose)  VERBOSE=1 ;;
         -*)
             error "Unknown option \"$arg\""
             EXITCODE=1 && return 0
             ;;
         ## subcommands
-        clean)     CLEAN=true ;;
-        compile)   COMPILE=true ;;
-        doc)       DOC=true ;;
-        help)      HELP=true ;;
-        lint)      LINT=true ;;
-        run)       COMPILE=true && RUN=true ;;
+        clean)     CLEAN=1 ;;
+        compile)   COMPILE=1 ;;
+        doc)       DOC=1 ;;
+        help)      HELP=1 ;;
+        lint)      LINT=1 ;;
+        run)       COMPILE=1 && RUN=1 ;;
         *)
             error "Unknown subcommand \"$arg\""
             EXITCODE=1 && return 0
@@ -78,7 +78,7 @@ args() {
     debug "Variables  : DART_HOME=$DART_HOME"
     debug "Variables  : GIT_HOME=$GIT_HOME"
     # See http://www.cyberciti.biz/faq/linux-unix-formatting-dates-for-display/
-    $TIMER && TIMER_START=$(date +"%s")
+    [[ $TIMER -eq 1 ]] && TIMER_START=$(date +"%s")
 }
 
 help() {
@@ -102,9 +102,9 @@ EOS
 
 clean() {
     if [[ -d "$TARGET_DIR" ]]; then
-        if $DEBUG; then
+        if [[ $DEBUG -eq 1 ]]; then
             debug "Delete directory \"$TARGET_DIR\""
-        elif $VERBOSE; then
+        elif [[ $VERBOSE -eq 1 ]]; then
             echo "Delete directory \"${TARGET_DIR/$ROOT_DIR\//}\"" 1>&2
         fi
         rm -rf "$TARGET_DIR"
@@ -114,11 +114,11 @@ clean() {
 
 lint() {
     local dart_opts=
-    $DEBUG && dart_opts="--verbose $dart_opts"
+    [[ $DEBUG -eq 1 ]] && dart_opts="--verbose $dart_opts"
 
-    if $DEBUG; then
+    if [[ $DEBUG -eq 1 ]]; then
         debug "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart/\" $dart_opts"
-    elif $VERBOSE; then
+    elif [[ $VERBOSE -eq 1 ]]; then
         echo "Analyze Dart source files in directory \"${mixed_path $SOURCE_DIR}\"" 1>&2
     fi
     eval "\"$DART_CMD\" analyze \"$(mixed_path $SOURCE_DIR)/main/dart\" $dart_opts"
@@ -147,10 +147,10 @@ compile() {
     local s=; [[ $n -gt 1 ]] && s="s"
     local n_files="$n Dart source file$s"
     local dart_opts="--output \"$TARGET_FILE\""
-    $DEBUG && dart_opts="--verbose $dart_opts"
-    if $DEBUG; then
+    [[ $DEBUG -eq 1 ]] && dart_opts="--verbose $dart_opts"
+    if [[ $DEBUG -eq 1 ]]; then
         debug "$DART_CMD compile exe $source_files $dart_opts"
-    elif $VERBOSE; then
+    elif [[ $VERBOSE -eq 1 ]]; then
         echo "Compile $n_files to directory \"${TARGET_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
     eval "\"$DART_CMD\" compile exe $source_files $dart_opts"
@@ -184,7 +184,7 @@ action_required() {
 mixed_path() {
     if [[ -x "$CYGPATH_CMD" ]]; then
         $CYGPATH_CMD -am $1
-    elif $mingw || $msys; then
+    elif [[ $(($mingw + $msys)) -gt 0 ]]; then
         echo $1 | sed 's|/|\\\\|g'
     else
         echo $1
@@ -196,10 +196,10 @@ doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
     local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
-    $DEBUG && dartdoc_opts="--verbose $dartdoc_opts"
-    if $DEBUG; then
+    [[ $DEBUG -eq 1 ]] && dartdoc_opts="--verbose $dartdoc_opts"
+    if [[ $DEBUG -eq 1 ]]; then
         debug "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
-    elif $VERBOSE; then
+    elif [[ $VERBOSE -eq 1 ]]; then
         echo "Generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
     eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
@@ -214,9 +214,9 @@ run() {
         error "Main program \"${MAIN_CLASS/$ROOT_DIR\//}\" not found"
         cleanup 1
     fi
-    if $DEBUG; then
+    if [[ $DEBUG -eq 1 ]]; then
         debug "Execute program \"$TARGET_FILE\""
-    elif $VERBOSE; then
+    elif [[ $VERBOSE -eq 1 ]]; then
         echo "Execute program \"${TARGET_FILE/$ROOT_DIR\//}\"" 1>&2
     fi
     eval "$TARGET_FILE"
@@ -244,35 +244,37 @@ SOURCE_MAIN_DIR=$SOURCE_DIR/main/dart
 TARGET_DIR=$ROOT_DIR/target
 TARGET_DOCS_DIR=$TARGET_DIR/docs
 
-CLEAN=false
-COMPILE=false
-DEBUG=false
-DOC=false
-HELP=false
-LINT=false
+## We refrain from using `true` and `false` which are Bash commands
+## (see https://man7.org/linux/man-pages/man1/false.1.html)
+CLEAN=0
+COMPILE=0
+DEBUG=0
+DOC=0
+HELP=0
+LINT=0
 MAIN_CLASS=hello-dart
 MAIN_ARGS=
-RUN=false
-TEST=false
-TIMER=false
-VERBOSE=false
+RUN=0
+TEST=0
+TIMER=0
+VERBOSE=0
 
 COLOR_START="[32m"
 COLOR_END="[0m"
 
-cygwin=false
-mingw=false
-msys=false
-darwin=false
+cygwin=0
+mingw=0
+msys=0
+darwin=0
 case "$(uname -s)" in
-    CYGWIN*) cygwin=true ;;
-    MINGW*)  mingw=true ;;
-    MSYS*)   msys=true ;;
-    Darwin*) darwin=true
+    CYGWIN*) cygwin=1 ;;
+    MINGW*)  mingw=1 ;;
+    MSYS*)   msys=1 ;;
+    Darwin*) darwin=1
 esac
 unset CYGPATH_CMD
 PSEP=":"
-if $cygwin || $mingw || $msys; then
+if [[ $(($cygwin + $mingw + $msys)) -gt 0 ]]; then
     CYGPATH_CMD="$(which cygpath 2>/dev/null)"
     PSEP=";"
     [[ -n "$DART_HOME" ]] && DART_HOME="$(mixed_path $DART_HOME)"
@@ -304,24 +306,24 @@ args "$@"
 ##############################################################################
 ## Main
 
-$HELP && help && cleanup
+[[ $HELP -eq 1 ]] && help && cleanup
 
-if $CLEAN; then
+if [[ $CLEAN -eq 1 ]]; then
     clean || cleanup 1
 fi
-if $LINT; then
+if [[ $LINT -eq 1 ]]; then
     lint || cleanup 1
 fi
-if $COMPILE; then
+if [[ $COMPILE -eq 1 ]]; then
     compile || cleanup 1
 fi
-if $DOC; then
+if [[ $DOC -eq 1 ]]; then
     doc || cleanup 1
 fi
-if $RUN; then
+if [[ $RUN -eq 1 ]]; then
     run || cleanup 1
 fi
-if $TEST; then
+if [[ $TEST -eq 1 ]]; then
     run_tests || cleanup 1
 fi
 cleanup
