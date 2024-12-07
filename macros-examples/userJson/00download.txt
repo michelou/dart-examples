@@ -1,0 +1,1 @@
+Source: https://dart.dev/language/macros#the-jsoncodable-macro

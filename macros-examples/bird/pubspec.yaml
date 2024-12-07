@@ -1,13 +1,13 @@
 # Referene: https://dart.dev/effective-dart/documentation
 
-name: records
+name: macros_example
 version: 1.0.0
 description: >-
-  Records
+  Macros example
 repository: https://github.com/michelou/dart-examples
 
 environment:
-  sdk: '>=3.1.0'
+  sdk: ^3.5.4
 
-dev_dependencies:
-  lint: ^2.1.2
+dependencies:
+  macros: ^0.1.2-main.4

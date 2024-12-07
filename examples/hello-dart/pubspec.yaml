@@ -3,8 +3,8 @@
 name: hello-dart
 version: 1.0.0
 description: >-
-  Hello world
-repository: https://github.com/michelou/golang-examples
+  Hello dart
+repository: https://github.com/michelou/dart-examples
 
 environment:
   sdk: '>=3.1.0'

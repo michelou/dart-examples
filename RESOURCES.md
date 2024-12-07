@@ -16,6 +16,7 @@
 ## <span id="blogs">Blogs</span> [**&#x25B4;**](#top)
 
 - [Sound null-safety for your Dart functions](https://appwrite.io/blog/post/sound-null-safety-for-your-dart-functions) by Vincent Ge, March 2024.
+- [Mastering Error Handling in Dart](https://lazebny.io/mastering-error-handling/) by Michael Lazebny, December 2024.
 - [Reflection in Dart: A Deep Dive into Dart's Reflective Capabilities](https://www.dhiwise.com/post/reflection-in-dart-a-deep-dive-into-dart-reflective-capabilities), by DhiWise, December 2023.
 - [Du Dart dans votre backend ? C’est possible !](https://blog.octo.com/du-dart-dans-votre-backend-cest-possible), by Fabien VallEe, July 2023.
 - [Yayo's Blog](https://yayocode.com/):
@@ -51,6 +52,7 @@
   - [Announcing Dart 2.12][blog_thomson_dart212] by Michael Thomsen, March 2021.
   - [Announcing sound null safety](https://pkg.go.dev/database/sql) by Filip Hracek, June 2020.
 - [Quickbird Blog](https://quickbirdstudios.com/blog/) :
+  - [A Deep Dive Into Macros in Dart & Flutter](https://quickbirdstudios.com/blog/macros-dart-flutter/) by Marvin März, November 2024.
   - [Class Modifiers in Dart: Sealed, Interface, Base](https://quickbirdstudios.com/blog/flutter-dart-class-modifiers/) by Marvin März, June 2023.
   - [Understanding Dart Memory: Weak References and Finalizers Demystified](https://quickbirdstudios.com/blog/dart-weak-references-finalizers/) by Marvin März, January 2023.
   - [Handling Exceptions in Dart & Flutter](https://quickbirdstudios.com/blog/handling-exceptions-flutter-dart/) by Marvin März, May 2022.
@@ -95,6 +97,7 @@
 
 ## <span id="tools">Tools and Libraries</span>
 
+- [Dart Code](https://github.com/Dart-Code/Dart-Code) &ndash; [Dart][dart_home] and Flutter support for VS Code.
 - [DartPad](https://dartpad.dev/) &ndash; an online [Dart][dart_home] editor with support for console, web, and Flutter apps.
 - [DCli](https://dcli.onepub.dev/) &ndash; a console SDK to create CLI applications.
 [dio](https://pub.dev/packages/dio) &ndash; a powerful HTTP networking package for Dart/Flutter.
@@ -116,7 +119,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/November 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/December 2024* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
