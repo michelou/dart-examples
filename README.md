@@ -20,13 +20,13 @@
 
 This project depends on the following external software for the **Microsoft Windows** platform:
 
-- [Dart 3.5][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
+- [Dart 3.6][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
 - [Git 2.47][git_releases] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.95][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.96][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
@@ -85,7 +85,7 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-      dart 3.5.4, make 4.4.1, code 1.95.3,
+      dart 3.6.0, make 4.4.1, code 1.96.0,
       git 2.47.1, diff 3.10, bash 5.2.37(1)
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
@@ -102,7 +102,7 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 <b>&gt; <a href="./setenv.bat">setenv -verbose</a></b>
 Select drive I: for which a substitution already exists
 Tool versions:
-   dart 3.5.4, make 4.4.1, code 1.95.3,
+   dart 3.6.0, make 4.4.1, code 1.96.0,
    git 2.47.1, diff 3.10, bash 5.2.37(1)
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
@@ -130,7 +130,7 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
 <a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
 <a href="https://git-scm.com/download/win">PortableGit-2.47.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.95.3.zip</a>       <i>(131 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.96.0.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 

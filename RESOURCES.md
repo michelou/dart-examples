@@ -34,9 +34,11 @@
   - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
+  - [Announcing Dart 3.6](https://medium.com/dartlang/announcing-dart-3-6-778dd7a80983), December 2024.
   - [Announcing Dart 3.5](https://medium.com/dartlang/dart-3-5-6ca36259fa2f), August 2024.
   - [Announcing Dart 3.4](https://medium.com/dartlang/dart-3-4-bd8d23b4462a), May 2024.
   - [New in Dart 3.3: Extension Types, JavaScript Interop, and More](https://medium.com/dartlang/dart-3-3-325bf2bf6c13), February 2024.
+  - [Tuple Types in Dart 3: A Comprehensive Overview](https://blog.stackademic.com/tuple-types-in-dart-3-a-comprehensive-overview-5ea68cf31b89) by Beck Moulton, January 2024.
   - [Announcing Dart 3.2][blog_thomsen_dart32], November 2023.
   - [Dart 3.1 & a retrospective on functional style programming in Dart 3][blog_belanger_dart31] by Marya Belanger, August 2023.
   - [Dart DevTools: Analyzing application performance with the CPU Profiler](https://medium.com/dartlang/dart-devtools-analyzing-application-performance-with-the-cpu-profiler-3e94a0ec06ae) by Ben Konyi, June 2023.
