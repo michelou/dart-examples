@@ -11,9 +11,43 @@
   </tr>
 </table>
 
+## <span id="bubbleSort">`bubbleSort` Example</span>
+
+This example has the following directory structure :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
+|   <a href="./bubbleSort/00download.txt">00download.txt</a>
+|   <a href="./bubbleSort/build.bat">build.bat</a>
+|   <a href="./bubbleSort/build.sh">build.sh</a>
+|   <a href="./bubbleSort/Makefile">Makefile</a>
+\---<b>src</b>
+    \---<b>main</b>
+        \---<b>dart</b>
+                <a href="./bubbleSort/src/main/dart/main.dart">main.dart</a>
+</pre>
+
+Command [**`build.bat run`**](./bubbleSort/build.bat) generates and executes the executable `target\bubbleSort.exe`.
+
+<pre  style="font-size:80%;">
+<b>&gt; <a href="./bubbleSort/build.bat">build</a> -verbose clean run</b>
+Compile 1 Dart source file into directory "target"
+Execute program "target\bubbleSort.exe"
+array=[5, 1, 4, 2, 8]
+Index i at pos: 0
+loop:0
+index i and j at pos: 0  &  0
+[...]
+loop:3
+index i and j at pos: 3  &  0
+sorted=[1, 2, 4, 5, 8]
+</pre>
+
+<!--==========================================================================-->
+
 ## <span id="enums">`enums` Example</span>
 
-Example `enums` has the following directory structure :
+This example has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
@@ -27,7 +61,7 @@ Example `enums` has the following directory structure :
                 <a href="./enums/src/main/dart/main.dart">main.dart</a>
 </pre>
 
-Command [**`build.bat run`**](./enums/build.bat) generates the executable `enums.exe` from source file [`main.dart`](./enums/src/main/dart/main.dart) and runs it.
+Command [**`build.bat run`**](./enums/build.bat) generates and executes the executable `target\enums.exe`.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./enums/build.bat">build</a> -verbose run</b>
@@ -205,7 +239,7 @@ Hello John! Your ticket is: 51
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/December 2024* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/January 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

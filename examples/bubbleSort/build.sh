@@ -194,34 +194,14 @@ mixed_path() {
 doc() {
     [[ -d "$TARGET_DOCS_DIR" ]] || mkdir -p "$TARGET_DOCS_DIR"
 
-    local doc_timestamp_file="$TARGET_DOCS_DIR/.latest-build"
-
-    local is_required="$(action_required "$doc_timestamp_file" "$CLASSES_DIR/" "*.tasty")"
-    [[ $is_required -eq 0 ]] && return 1
-
-    local sources_file="$TARGET_DIR/scaladoc_sources.txt"
-    [[ -f "$sources_file" ]] && rm -rf "$sources_file"
-    # for f in $(find $SOURCE_DIR/main/java/ -name *.java 2>/dev/null); do
-    #     echo $(mixed_path $f) >> "$sources_file"
-    # done
-    for f in $(find "$CLASSES_DIR/" -type f -name "*.tasty" 2>/dev/null); do
-        echo $(mixed_path $f) >> "$sources_file"
-    done
-    local opts_file="$TARGET_DIR/scaladoc_opts.txt"
-    if [[ $SCALA_VERSION -eq 2 ]]; then
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -doc-title "$PROJECT_NAME" -doc-footer "$PROJECT_URL" -doc-version "$PROJECT_VERSION" > "$opts_file"
-    else
-        echo -d "$(mixed_path $TARGET_DOCS_DIR)" -project "$PROJECT_NAME" -project-version "$PROJECT_VERSION" > "$opts_file"
-    fi
-    local dart_opts="--output=\"$TARGET_DOCS_DIR\""
-    [[ $DEBUG -eq 1 ]] && dart_opts="--verbose $dart_opts"
-
+    local dartdoc_opts="--output=\"$TARGET_DOCS_DIR\""
+    [[ $DEBUG -eq 1 ]] && dartdoc_opts="--verbose $dartdoc_opts"
     if [[ $DEBUG -eq 1 ]]; then
-        debug "\"$DART_CMD\" doc \"$SOURCE_DIR/main/dart/\" $dart_opts"
+        debug "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     elif [[ $VERBOSE -eq 1 ]]; then
         echo "Generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\"" 1>&2
     fi
-    eval "\"$DART_CMD\" doc \"$SOURCE_DIR/main/dart/\" $dart_opts"
+    eval "\"$DART_CMD\" doc $dartdoc_opts \"$SOURCE_MAIN_DIR/\""
     if [[ $? -ne 0 ]]; then
         error "Failed to generate documentation into directory \"${TARGET_DOCS_DIR/$ROOT_DIR\//}\""
         cleanup 1
@@ -313,7 +293,7 @@ PROJECT_NAME="$(basename $ROOT_DIR)"
 PROJECT_URL="github.com/$USER/dart-examples"
 PROJECT_VERSION="1.0-SNAPSHOT"
 
-APP_NAME="records"
+APP_NAME="bubbleSort"
 
 TARGET_FILE="$TARGET_DIR/$APP_NAME.exe"
 
