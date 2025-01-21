@@ -1,3 +1,4 @@
+.dart_tool/
 .gradle/
 .idea/
 .settings/
@@ -10,3 +11,4 @@ src/build/
 target/
 *.exe
 *.iml
+*.lock

@@ -53,6 +53,9 @@
   - [Announcing Dart 2.13][blog_thomsen_dart213] by Michael Thomsen, May 2021.
   - [Announcing Dart 2.12][blog_thomson_dart212] by Michael Thomsen, March 2021.
   - [Announcing sound null safety](https://pkg.go.dev/database/sql) by Filip Hracek, June 2020.
+- [Medium &ndash; Flutter Community](https://medium.com/flutter-community) :
+  - [Streams Rx Dart: Part I](https://medium.com/flutter-community/streams-rx-dart-part-i-b7b33a2347f4) by Fares Othmane Mokhtari, January 2025.
+  - [What can I do with “Extension Types” in Dart?](https://medium.com/flutter-community/what-can-i-do-with-extension-types-in-dart-5dfa73e4b009) by Yii Chen, June 2024.
 - [Quickbird Blog](https://quickbirdstudios.com/blog/) :
   - [A Deep Dive Into Macros in Dart & Flutter](https://quickbirdstudios.com/blog/macros-dart-flutter/) by Marvin März, November 2024.
   - [Class Modifiers in Dart: Sealed, Interface, Base](https://quickbirdstudios.com/blog/flutter-dart-class-modifiers/) by Marvin März, June 2023.

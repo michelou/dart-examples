@@ -11,9 +11,11 @@
   </tr>
 </table>
 
+> **&#9755;** The [Dart macro system](https://dart.dev/language/macros) is a major new language feature ***currently under development*** which adds support for static meta-programming to the [Dart] language.
+
 ## <span id="bird">`bird` Example</span>
 
-Example `bird` has the following directory structure :
+This example has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
@@ -31,7 +33,7 @@ Example `bird` has the following directory structure :
                 <a href="">main.dart</a>
 </pre>
 
-Command [**`build.bat run`**](./bird/build.bat) generates the executable `bird.exe` from source file [`main.dart`](./bird/src/main/dart/main.dart) and runs it.
+Command [**`build.bat run`**](./bird/build.bat) generates and executes the executable `bird.exe`.
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="./bird/build.bat">build</a> -verbose run</b>
@@ -88,7 +90,7 @@ Bird
 
 ## <span id="user_json">`userJson` Example</span>
 
-Example `userJson` has the following directory structure :
+This example has the following directory structure :
 
 <pre style="font-size:80%;">
 <b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
@@ -167,4 +169,5 @@ Instance of 'User'
 
 <!-- link refs -->
 
+[dart]: https://dart.dev
 [make_cli]: https://man7.org/linux/man-pages/man1/make.1.html

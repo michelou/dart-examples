@@ -7,8 +7,10 @@ description: >-
 repository: https://github.com/michelou/dart-examples
 
 environment:
-  sdk: ^3.5.4
+  sdk: ^3.6.1
 
+# https://pub.dev/packages/macros/versions
+# https://pub.dev/packages/json/versions
 dependencies:
-  macros: ^0.1.2-main.4
-  json: ^0.20.2
+  macros: ^0.1.3-main.0  # ^0.1.2-main.4
+  json: ^0.20.4
