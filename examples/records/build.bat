@@ -60,7 +60,7 @@ set "_SOURCE_DIR=%_ROOT_DIR%src"
 set "_TARGET_DIR=%_ROOT_DIR%target"
 set "_TARGET_DOCS_DIR=%_TARGET_DIR%\docs"
 
-for %%i in ("%~dp0\.") do set "_MAIN_NAME=%%~ni"
+for /f "delims=" %%i in ("%~dp0\.") do set "_MAIN_NAME=%%~ni"
 set "_EXE_FILE=%_TARGET_DIR%\%_MAIN_NAME%.exe"
 
 if not exist "%DART_HOME%\bin\dart.exe" (

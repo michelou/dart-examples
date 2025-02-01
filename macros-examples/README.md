@@ -11,7 +11,8 @@
   </tr>
 </table>
 
-> **&#9755;** The [Dart macro system](https://dart.dev/language/macros) is a major new language feature ***currently under development*** which adds support for static meta-programming to the [Dart] language.
+> **&#9755;** The [Dart macro system](https://dart.dev/language/macros) is a major new language feature ***currently under development*** which adds support for static meta-programming to the [Dart] language.<br/>
+> <span style="color:red;">⚠</span> The Dart team has decided to stop his work on macros; see [An update on Dart macros & data serialization](https://medium.com/dartlang/an-update-on-dart-macros-data-serialization-06d3037d4f12).
 
 ## <span id="bird">`bird` Example</span>
 
@@ -164,7 +165,7 @@ Instance of 'User'
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/January 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

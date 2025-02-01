@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (c) 2018-2024 Stéphane Micheloud
+# Copyright (c) 2018-2025 Stéphane Micheloud
 #
 # Licensed under the MIT License.
 #
@@ -239,10 +239,10 @@ EXITCODE=0
 
 ROOT_DIR="$(getHome)"
 
-SOURCE_DIR=$ROOT_DIR/src
-SOURCE_MAIN_DIR=$SOURCE_DIR/main/dart
-TARGET_DIR=$ROOT_DIR/target
-TARGET_DOCS_DIR=$TARGET_DIR/docs
+SOURCE_DIR="$ROOT_DIR/src"
+SOURCE_MAIN_DIR="$SOURCE_DIR/main/dart"
+TARGET_DIR="$ROOT_DIR/target"
+TARGET_DOCS_DIR="$TARGET_DIR/docs"
 
 ## We refrain from using `true` and `false` which are Bash commands
 ## (see https://man7.org/linux/man-pages/man1/false.1.html)
