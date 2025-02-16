@@ -34,6 +34,7 @@
   - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
+  - [Announcing Dart 3.7](https://medium.com/dartlang/announcing-dart-3-7-bf864a1b195c), February 2025.
   - [Dart and the performance benefits of sound types](https://medium.com/dartlang/dart-and-the-performance-benefits-of-sound-types-6ceedd5b6cdc) by Vijav Menon, January 2025.
   - [Announcing Dart 3.6](https://medium.com/dartlang/announcing-dart-3-6-778dd7a80983), December 2024.
   - [Announcing Dart 3.5](https://medium.com/dartlang/dart-3-5-6ca36259fa2f), August 2024.
@@ -95,7 +96,7 @@
 ## <span id="news">News</span> [**&#x25B4;**](#top)
 
 - <img src="./docs/images/Reddit_Icon.jpg" style="width:16px;"/> [<span style="color:#ff4233;">reddit</span>]() &ndash; [r/dartlang](https://www.reddit.com/r/dartlang/).
-- [Twitter &ndash; Dart Language](https://twitter.com/dart_lang).
+- [X (Twitter) &ndash; Dart Language](https://twitter.com/dart_lang).
 
 ## <span id="talks">Talks</span>
 

@@ -50,22 +50,36 @@ TARGET_DOC_DIR = $(TARGET_DIR)/docs
 TARGET_DOC     = $(TARGET_DIR)/dart_doc.txt
 
 ifdef DEBUG
-DARTDOC_OPTS=--verbose --output "$(abspath $(TARGET_DOC_DIR))" "$(abspath $(SOURCE_DIR))/main/dart"
+DARTDOC_OPTS=--verbose --output "$(abspath $(TARGET_DOC_DIR))"
 else
-DARTDOC_OPTS=--output "$(abspath $(TARGET_DOC_DIR))" "$(abspath $(SOURCE_DIR))/main/dart"
+DARTDOC_OPTS=--output "$(abspath $(TARGET_DOC_DIR))"
 endif
 
 doc: $(TARGET_DOC)
 
 $(TARGET_DOC): $(SOURCES)
 	[ -d "$(TARGET_DOC_DIR)" ] || "$(MKDIR)" -p "$(TARGET_DOC_DIR)"
-	"$(DART)" doc $(DARTDOC_OPTS)
+	"$(DART)" doc $(DARTDOC_OPTS) "$(abspath $(SOURCE_DIR))/main/dart"
 	@$(TOUCH) "$(TARGET_DOC)"
 
 
 ##############################################################################
 ## lint rules
 
+TARGET_LINT = $(TARGET_DIR)/dart_analyze.txt
+
+ifdef DEBUG
+DARTANALYZE_OPTS=--verbose
+else
+DARTANALYZE_OPTS=
+endif
+
+lint: $(TARGET_LINT)
+
+$(TARGET_LINT): $(SOURCES)
+	[ -d "$(TARGET_DIR)" ] || "$(MKDIR)" -p "$(TARGET_DIR)"
+	"$(DART)" analyze $(DARTANALYZE_OPTS) "$(abspath $(SOURCE_DIR))/main/dart"
+	@$(TOUCH) "$(TARGET_LINT)"
 
 ##############################################################################
 ## test rules
