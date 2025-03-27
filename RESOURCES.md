@@ -29,9 +29,9 @@
   - [Dart Immutable Collections](https://www.christianfindlay.com/blog/dart-immutable-collections), September 2022.
   - [Dart Classes for C# Programmers](https://www.christianfindlay.com/blog/dart-classes), September 2021.
   - [Flutter: First Impressions](https://www.christianfindlay.com/blog/flutter-first-impressions), September 2021.
-- [Flutter &amp; Dart Blog](https://stevenosse.com/flutter-and-dart) by Steve Nosse :
-  - [Dart 3 in depth: New class modifiers](https://stevenosse.com/dart-3-in-depth-new-class-modifiers), April 2023.
-  - [Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.
+- ~~[Flutter &amp; Dart Blog](https://stevenosse.com/flutter-and-dart) by Steve Nosse :~~
+  - ~~[Dart 3 in depth: New class modifiers](https://stevenosse.com/dart-3-in-depth-new-class-modifiers), April 2023.~~
+  - ~~[Dart 3 in depth: Records](https://stevenosse.com/dart-3-in-depth-records), March 2023.~~
 - [Better isolate management with Isolate.run()](https://medium.com/dartlang/better-isolate-management-with-isolate-run-547ef3d6459b) by Marya Delanger, January 2023.
 - [Medium &ndash; Dart Language](https://medium.com/dartlang) :
   - [Announcing Dart 3.7](https://medium.com/dartlang/announcing-dart-3-7-bf864a1b195c), February 2025.
@@ -126,7 +126,7 @@
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->

@@ -21,17 +21,17 @@
 This project depends on the following external software for the **Microsoft Windows** platform:
 
 - [Dart 3.7][dart_releases] ([*changelog*][dart_changelog]) ([*issue tracker*][dart_issue_tracker])
-- [Git 2.48][git_releases] ([*release notes*][git_relnotes])
+- [Git 2.49][git_releases] ([*release notes*][git_relnotes])
 
 Optionally one may also install the following software:
 
 - [ConEmu 2023][conemu_downloads] ([*release notes*][conemu_relnotes])
-- [Visual Studio Code 1.97][vscode_downloads] ([*release notes*][vscode_relnotes])
+- [Visual Studio Code 1.98][vscode_downloads] ([*release notes*][vscode_relnotes])
 
 > **&#9755;** ***Installation policy***<br/>
 > When possible we install software from a [Zip archive][zip_archive] rather than via a [Windows installer][windows_installer]. In our case we defined **`C:\opt\`** as the installation directory for optional software tools (*in reference to* the [**`/opt/`**][unix_opt] directory on Unix).
 
-For instance our development environment looks as follows (*February 2025*) <sup id="anchor_01">[1](#footnote_01)</sup>:
+For instance our development environment looks as follows (*March 2025*) <sup id="anchor_01">[1](#footnote_01)</sup>:
 
 <pre style="font-size:80%;">
 C:\opt\ConEmu\      <i>( 26 MB)</i>
@@ -85,8 +85,8 @@ We execute command [**`setenv.bat`**](setenv.bat) once to setup our development 
    <pre style="font-size:80%;">
    <b>&gt; <a href="./setenv.bat">setenv</a></b>
    Tool versions:
-      dart 3.7.0, make 4.4.1, code 1.97.2,
-      git 2.48.1, diff 3.10, bash 5.2.37(1)
+      dart 3.7.2, make 4.4.1, code 1.98.2,
+      git 2.49.0, diff 3.11, bash 5.2.37(1)
    &nbsp;
    <b>&gt; <a href="">where</a> git make sh</b>
    C:\opt\Git\bin\git.exe
@@ -102,8 +102,8 @@ Command [**`setenv -verbose`**](./setenv.bat) also displays the tool paths, the 
 <b>&gt; <a href="./setenv.bat">setenv -verbose</a></b>
 Select drive I: for which a substitution already exists
 Tool versions:
-   dart 3.7.0, make 4.4.1, code 1.97.2,
-   git 2.48.1, diff 3.10, bash 5.2.37(1)
+   dart 3.7.2, make 4.4.1, code 1.98.2,
+   git 2.49.0, diff 3.11, bash 5.2.37(1)
 Tool paths:
    C:\opt\dart-sdk\bin\dart.exe
    C:\opt\msys64\usr\bin\make.exe
@@ -128,9 +128,9 @@ In our case we downloaded the following installation files (<a href="#proj_deps"
 </p>
 <pre style="font-size:80%;">
 <a href="https://github.com/Maximus5/ConEmu/releases/tag/v23.07.24" rel="external">ConEmuPack.230724.7z</a>              <i>(  5 MB)</i>
-<a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(201 MB)</i>
-<a href="https://git-scm.com/download/win">PortableGit-2.48.1-64-bit.7z.exe</a>  <i>( 41 MB)</i>
-<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.97.2.zip</a>       <i>(131 MB)</i>
+<a href="https://dart.dev/tools/sdk/archive#stable-channel">dartsdk-windows-x64-release.zip</a>   <i>(206 MB)</i>
+<a href="https://git-scm.com/download/win">PortableGit-2.49.0-64-bit.7z.exe</a>  <i>( 41 MB)</i>
+<a href="https://code.visualstudio.com/Download#" rel="external">VSCode-win32-x64-1.98.2.zip</a>       <i>(131 MB)</i>
 </pre>
 </dd></dl>
 
@@ -157,7 +157,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/February 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/March 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
@@ -179,7 +179,7 @@ Concretely, in our GitHub projects which depend on Visual Studio (e.g. <a href="
 [flix_examples]: https://github.com/michelou/flix-examples#top
 [git_cli]: https://git-scm.com/docs/git
 [git_releases]: https://git-scm.com/download/win
-[git_relnotes]: https://github.com/git/git/blob/v2.48.1/Documentation/RelNotes/2.48.1.txt
+[git_relnotes]: https://github.com/git/git/blob/v2.49.0/Documentation/RelNotes/2.49.0.txt
 [github_markdown]: https://github.github.com/gfm/
 [golang_examples]: https://github.com/michelou/golang-examples#top
 [graalvm_examples]: https://github.com/michelou/graalvm-examples#top
