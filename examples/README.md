@@ -104,6 +104,36 @@ A car is a vehicle with 4 tires.
 80
 </pre>
 
+<!--=======================================================================-->
+
+## <span id="heapSort">`heapSort` Example</span> [**&#x25B4;**](#top)
+
+Example `heapSort` has the following directory structure :
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree" rel="external">tree</a> /f /a . | <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/findstr" rel="external">findstr</a> /v /b [A-Z]</b>
+|   <a href="./heapSort/00download.txt">00download.txt</a>
+|   <a href="./heapSort/build.bat">build.bat</a>
+|   <a href="./heapSort/build.sh">build.sh</a>
+|   <a href="./heapSort/Makefile">Makefile</a>
+\---<b>src</b>
+    \---<b>main</b>
+        \---<b>dart</b>
+                <a href="./heapSort/src/main/dart/main.dart">main.dart</a>
+</pre>
+
+Command [`build.bat`](./heapSort/build.bat) generates the executable `heapSort.exe` from source file [`main.dart`](./heapSort/src/main/dart/main.dart) and runs it.
+
+<pre style="font-size:80%;">
+<b>&gt; <a href="./heapSort/build.bat">build</a> -verbose clean run</b>
+Compile 1 Dart source file into directory "target"
+Execute program "target\heapSort.exe"
+array=[5, 1, 4, 2, 8, 3, 7]
+sorted=[1, 2, 3, 4, 5, 7, 8]
+</pre>
+
+<!--=======================================================================-->
+
 ## <span id="hello_dart">`hello-dart` Example</span> [**&#x25B4;**](#top)
 
 Example `hello-dart` has the following directory structure :
@@ -239,7 +269,7 @@ Hello John! Your ticket is: 51
 
 ***
 
-*[mics](https://lampwww.epfl.ch/~michelou/)/March 2025* [**&#9650;**](#top)
+*[mics](https://lampwww.epfl.ch/~michelou/)/October 2025* [**&#9650;**](#top)
 <span id="bottom">&nbsp;</span>
 
 <!-- link refs -->
